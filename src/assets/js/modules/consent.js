@@ -66,6 +66,8 @@ function showBanner() {
 
 function hideBanner() {
   if (banner) banner.hidden = true;
+  // Let the page react (for example the mobile call-to-action dock).
+  window.dispatchEvent(new Event('scroll'));
 }
 
 function openDialog() {

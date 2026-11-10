@@ -152,8 +152,32 @@ function setSending(state) {
 
 /* ------------------------------- submission ------------------------------ */
 
+function wantsWaitingList() {
+  try {
+    return new URLSearchParams(window.location.search).get('waitlist') === '1';
+  } catch {
+    return false;
+  }
+}
+
+/** Fill the progress bar: one step for the ticket, each required field and each confirmation. */
+function updateProgress() {
+  const bar = qs('#form-progress-bar');
+  if (!bar) return;
+  const required = FIELDS.filter((field) => field.required);
+  const total = 1 + required.length + CHECKS.length;
+  let done = selectedPlan() ? 1 : 0;
+  for (const field of required) if (value(field) && !fieldProblem(field)) done += 1;
+  for (const check of CHECKS) if (qs(`#${check.id}`).checked) done += 1;
+  const percent = Math.round((done / total) * 100);
+  bar.setAttribute('aria-valuenow', String(percent));
+  bar.style.setProperty('--done', (done / total).toFixed(3));
+  qs('#form-progress-text').textContent = t('submit.progressValue', { percent });
+}
+
 function collect() {
   const data = { plan: selectedPlan() };
+  if (wantsWaitingList()) data.waitingList = true;
   for (const field of FIELDS) data[field.name] = value(field);
   data.appUrl = safeHttpsUrl(data.appUrl);
   data.appUrl2 = data.appUrl2 ? safeHttpsUrl(data.appUrl2) : '';
@@ -171,7 +195,7 @@ function planLabel(id) {
 }
 
 function summaryText(data) {
-  const lines = [`${t('submit.mailPlan')}: ${planLabel(data.plan)}`];
+  const lines = [`${t('submit.mailPlan')}: ${planLabel(data.plan)}${data.waitingList ? ` (${t('tickets.waitlist')})` : ''}`];
   for (const field of FIELDS) {
     const text = data[field.name];
     if (!text) continue;
@@ -370,6 +394,7 @@ export function initSubmit(siteConfig) {
       if (!qs('#form-errors').hidden) showSummary(t('submit.errSummary'));
     }
     if (!sending) qs('#submit-btn-label').textContent = t('submit.send');
+    updateProgress();
   });
 
   if (framed()) {
@@ -384,6 +409,9 @@ export function initSubmit(siteConfig) {
 
   form.hidden = false;
   preselectPlan();
+  updateProgress();
+  form.addEventListener('input', updateProgress);
+  form.addEventListener('change', updateProgress);
 
   form.addEventListener('submit', onSubmit);
 

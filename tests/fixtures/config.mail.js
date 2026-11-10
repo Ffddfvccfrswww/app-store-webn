@@ -26,6 +26,6 @@ export default {
   plans: [
     { id: 'screening', price: 19, checkoutUrl: 'https://checkout.example.com/screening', featured: false },
     { id: 'premiere', price: 49, checkoutUrl: 'https://checkout.example.com/premiere', featured: true },
-    { id: 'blockbuster', price: 149, checkoutUrl: '', featured: false },
+    { id: 'blockbuster', price: 149, checkoutUrl: '', featured: false, slots: 5 },
   ],
 };

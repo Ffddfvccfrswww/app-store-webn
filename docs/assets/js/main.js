@@ -7,6 +7,7 @@ import { initI18n } from './modules/i18n.js';
 import { initMotion } from './modules/motion.js';
 import { initChrome, startReveals } from './modules/chrome.js';
 import { initConsent } from './modules/consent.js';
+import { initDelight } from './modules/delight.js';
 
 const root = document.documentElement;
 
@@ -22,6 +23,7 @@ async function start() {
   initMotion();
   initChrome();
   initConsent(config);
+  initDelight();
 
   const page = document.body.dataset.page;
   if (page === 'home') {

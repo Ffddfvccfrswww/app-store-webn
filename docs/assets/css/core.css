@@ -496,7 +496,7 @@ main:focus {
 }
 
 .btn--primary:hover {
-  transform: translateY(-2px);
+  --lift: -2px;
   box-shadow:
     0 0 0 1px rgba(255, 228, 180, 0.6) inset,
     0 16px 44px -8px rgba(255, 143, 61, 0.95);
@@ -511,7 +511,7 @@ main:focus {
 .btn--outline:hover {
   border-color: var(--c-amber);
   color: var(--c-amber-hi);
-  transform: translateY(-2px);
+  --lift: -2px;
 }
 
 .btn--ghost {
@@ -524,7 +524,7 @@ main:focus {
 
 .btn--ghost:hover {
   background: rgba(255, 255, 255, 0.14);
-  transform: translateY(-2px);
+  --lift: -2px;
 }
 
 .btn--sm {
@@ -621,6 +621,238 @@ main:focus {
 .link-btn:hover {
   color: var(--c-amber-hi);
   text-decoration-color: currentColor;
+}
+
+/* --------------------------------------------------------------------------
+   5b. Micro-interactions
+   Every control answers the pointer: a soft light follows the cursor across
+   it, primary buttons lean towards the pointer and catch a sweep of light,
+   and everything gives a little when pressed. The transform is assembled
+   from custom properties so lift, magnetic pull and press can combine.
+   -------------------------------------------------------------------------- */
+
+.btn,
+.icon-btn,
+.chip,
+.headliner {
+  --tx: 0px;
+  --ty: 0px;
+  --lift: 0px;
+  --press: 1;
+  transform: translate3d(var(--tx), calc(var(--ty) + var(--lift)), 0) scale(var(--press));
+}
+
+.btn,
+.chip,
+.headliner {
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.icon-btn,
+.chip,
+.headliner {
+  transition:
+    transform 0.35s var(--ease-out),
+    background-color 0.25s ease,
+    border-color 0.25s ease,
+    color 0.25s ease,
+    box-shadow 0.35s ease;
+}
+
+.is-magnet {
+  transition-duration: 0.14s, 0.25s, 0.25s, 0.25s, 0.35s;
+}
+
+.btn:active,
+.icon-btn:active,
+.chip:active,
+.headliner:active {
+  --press: 0.96;
+  transition-duration: 0.08s;
+}
+
+.icon-btn:hover,
+.chip:hover,
+.headliner:hover {
+  --lift: -1px;
+}
+
+.icon-btn svg {
+  transition: scale 0.4s var(--ease-out);
+}
+
+.icon-btn:hover svg {
+  scale: 1.14;
+}
+
+/* Light that follows the pointer */
+.btn::before,
+.chip::before,
+.headliner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: inherit;
+  background: radial-gradient(130px circle at var(--px, 50%) var(--py, 50%), rgba(255, 196, 120, 0.3), rgba(255, 196, 120, 0) 70%);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  pointer-events: none;
+}
+
+.btn--primary::before {
+  background: radial-gradient(130px circle at var(--px, 50%) var(--py, 50%), rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0) 70%);
+}
+
+.btn:hover::before,
+.chip:hover::before,
+.headliner:hover::before {
+  opacity: 1;
+}
+
+/* A sweep of light across primary buttons */
+.btn--primary::after {
+  content: '';
+  position: absolute;
+  inset-block: 0;
+  inset-inline-start: -70%;
+  z-index: -1;
+  width: 55%;
+  background: linear-gradient(100deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0));
+  transform: skewX(-20deg);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.btn--primary:hover::after {
+  animation: light-sweep 0.9s var(--ease-out);
+}
+
+@keyframes light-sweep {
+  0% {
+    opacity: 0;
+    translate: 0 0;
+  }
+  18% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    translate: 430% 0;
+  }
+}
+
+[dir='rtl'] .btn--primary:hover::after {
+  animation-name: light-sweep-rtl;
+}
+
+@keyframes light-sweep-rtl {
+  0% {
+    opacity: 0;
+    translate: 0 0;
+  }
+  18% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    translate: -430% 0;
+  }
+}
+
+/* The cursor companion (fine pointers only; the real cursor is never hidden) */
+.cursor {
+  position: fixed;
+  inset-block-start: 0;
+  left: 0;
+  z-index: 80;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.cursor.is-on {
+  opacity: 1;
+}
+
+.cursor__ring,
+.cursor__dot {
+  position: absolute;
+  inset-block-start: 0;
+  left: 0;
+  border-radius: 50%;
+}
+
+.cursor__ring {
+  width: 38px;
+  height: 38px;
+  margin: -19px;
+  border: 1px solid rgba(255, 180, 84, 0.65);
+  transition:
+    scale 0.4s var(--ease-out),
+    background-color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.cursor__dot {
+  width: 6px;
+  height: 6px;
+  margin: -3px;
+  background: var(--c-amber);
+  transition: scale 0.3s var(--ease-out);
+}
+
+.cursor.is-hover .cursor__ring {
+  scale: 1.75;
+  border-color: rgba(255, 180, 84, 0.95);
+  background: rgba(255, 180, 84, 0.1);
+}
+
+.cursor.is-hover .cursor__dot {
+  scale: 0;
+}
+
+.cursor.is-down .cursor__ring {
+  scale: 0.75;
+}
+
+.motion-off .cursor {
+  display: none;
+}
+
+/* Page-to-page transitions */
+@media (prefers-reduced-motion: no-preference) {
+  @view-transition {
+    navigation: auto;
+  }
+
+  ::view-transition-old(root) {
+    animation: page-out 0.26s ease both;
+  }
+
+  ::view-transition-new(root) {
+    animation: page-in 0.5s var(--ease-out) both;
+  }
+}
+
+@keyframes page-out {
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes page-in {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+}
+
+.motion-off::view-transition-group(*),
+.motion-off::view-transition-old(*),
+.motion-off::view-transition-new(*) {
+  animation-duration: 0.001s !important;
 }
 
 /* --------------------------------------------------------------------------

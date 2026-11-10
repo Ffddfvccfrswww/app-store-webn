@@ -11,19 +11,22 @@ export default {
       "id": "screening",
       "price": 19,
       "checkoutUrl": "",
-      "featured": false
+      "featured": false,
+      "slots": 0
     },
     {
       "id": "premiere",
       "price": 49,
       "checkoutUrl": "",
-      "featured": true
+      "featured": true,
+      "slots": 0
     },
     {
       "id": "blockbuster",
       "price": 149,
       "checkoutUrl": "",
-      "featured": false
+      "featured": false,
+      "slots": 5
     }
   ],
   "forms": {

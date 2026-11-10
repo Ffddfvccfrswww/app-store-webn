@@ -12,7 +12,9 @@ import { qs, qsa, clamp, smoothstep } from './modules/dom.js';
 import { t, formatPrice, getLanguage, isRtl, onLanguageChange } from './modules/i18n.js';
 import { isMotionOff, onMotionChange } from './modules/motion.js';
 import { startReveals } from './modules/chrome.js';
-import { initShowcase, getHeadliner } from './modules/showcase.js';
+import { initShowcase, getHeadliner, realCount, openAppById } from './modules/showcase.js';
+import { countUp } from './modules/delight.js';
+import { share, shareUrl } from './modules/share.js';
 import { resolveShot, blendShots } from './scene/shots.js';
 
 const root = document.documentElement;
@@ -49,7 +51,89 @@ function renderPrices() {
   for (const plan of config.plans) {
     const node = qs(`[data-plan-price="${plan.id}"]`);
     if (node) node.textContent = formatPrice(plan.price, config.currency);
+    // The same price seen per day (a month is counted as 30 days).
+    const perDay = qs(`[data-plan-perday="${plan.id}"]`);
+    if (perDay) {
+      const daily = Math.round((plan.price / 30) * 100) / 100;
+      perDay.textContent = t('tickets.perDay', { price: formatPrice(daily, config.currency) });
+    }
   }
+}
+
+/** Prices count up once, the first time the tickets scroll into view. */
+function initPriceCountUp() {
+  const list = qs('.tickets');
+  if (!list || !('IntersectionObserver' in window)) return;
+  const observer = new IntersectionObserver(
+    (entries) => {
+      if (!entries.some((entry) => entry.isIntersecting)) return;
+      observer.disconnect();
+      for (const plan of config.plans) {
+        countUp(qs(`[data-plan-price="${plan.id}"]`), plan.price, (value) => formatPrice(value, config.currency));
+      }
+    },
+    { threshold: 0.3 },
+  );
+  observer.observe(list);
+}
+
+/**
+ * Open spots and the size of the programme. Both are counted from the real
+ * listings in apps.json, so what visitors read is always true.
+ */
+function renderAvailability() {
+  for (const plan of config.plans) {
+    const node = qs(`[data-plan-spots="${plan.id}"]`);
+    const label = qs(`#plan-${plan.id}-cta`);
+    const link = label ? label.closest('a') : null;
+    if (!node) continue;
+    if (!plan.slots) {
+      node.hidden = true;
+      continue;
+    }
+    const left = Math.max(0, plan.slots - realCount(plan.id));
+    node.hidden = false;
+    node.classList.toggle('is-full', left === 0);
+    node.textContent = left > 0 ? t('tickets.spotsOpen', { left, total: plan.slots }) : t('tickets.spotsFull');
+    if (label) label.textContent = t(left > 0 ? 'tickets.cta' : 'tickets.waitlist');
+    if (link) link.setAttribute('href', `submit.html?plan=${plan.id}${left > 0 ? '' : '&waitlist=1'}`);
+  }
+  const count = qs('#showing-count');
+  if (count) {
+    const total = realCount();
+    count.hidden = total < 3;
+    if (total >= 3) count.textContent = t('showing.count', { count: total });
+  }
+}
+
+function initInvite() {
+  const button = qs('#invite-btn');
+  if (!button) return;
+  button.addEventListener('click', () => {
+    share({
+      title: config.brand.name,
+      text: t('share.message'),
+      url: shareUrl(config),
+      button,
+      kind: 'site',
+    });
+  });
+}
+
+/** The mobile dock appears after the opening shot and steps aside for the finale and the privacy notice. */
+function updateDock() {
+  const dock = qs('#dock');
+  if (!dock) return;
+  const banner = qs('#consent-banner');
+  const finale = sections.find((section) => section.id === 'finale');
+  const beforeFinale = !finale || window.scrollY + window.innerHeight < finale.top + window.innerHeight * 0.35;
+  const show =
+    narrowQuery.matches &&
+    window.scrollY > window.innerHeight * 0.85 &&
+    beforeFinale &&
+    (!banner || banner.hidden) &&
+    !root.classList.contains('menu-open');
+  if (dock.hidden === show) dock.hidden = !show;
 }
 
 /* ------------------------------ scroll → shots ---------------------------- */
@@ -164,6 +248,7 @@ function update() {
 
   updateHud(progress);
   updatePin();
+  updateDock();
   if (stage) stage.setTarget(shot);
 }
 
@@ -314,6 +399,8 @@ export async function initHome(siteConfig) {
   narrowQuery = window.matchMedia('(max-width: 860px), (max-aspect-ratio: 9/10)');
 
   renderPrices();
+  initPriceCountUp();
+  initInvite();
   syncPinMode();
   initAnchors();
   initPointer();
@@ -340,6 +427,7 @@ export async function initHome(siteConfig) {
 
   onLanguageChange(() => {
     renderPrices();
+    renderAvailability();
     if (stage) stage.setView(view());
     // Text lengths change with the language, so section positions do too.
     window.requestAnimationFrame(() => {
@@ -360,12 +448,21 @@ export async function initHome(siteConfig) {
 
   // Content first; the showcase and the stage load side by side.
   const showcase = initShowcase({
+    config,
     onHeadliner() {
       if (stage) stage.setScreen(screenContent());
     },
   }).then(() => {
+    renderAvailability();
     measure();
     requestUpdate();
+    // A shared link such as index.html?app=my-app opens that listing.
+    try {
+      const wanted = new URLSearchParams(window.location.search).get('app');
+      if (wanted && /^[a-z0-9-]{1,49}$/.test(wanted)) openAppById(wanted);
+    } catch {
+      /* ignore malformed addresses */
+    }
   });
 
   raiseCurtain(startedAt);

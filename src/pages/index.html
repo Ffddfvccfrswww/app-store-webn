@@ -139,6 +139,7 @@
           <span class="marquee__bulbs marquee__bulbs--bottom" aria-hidden="true"></span>
         </div>
         <p class="section-head__lead reveal" data-i18n="showing.lead"></p>
+        <p class="showing__count" id="showing-count" hidden></p>
       </header>
       <div class="filters reveal" id="filters" role="group" data-i18n-attr="aria-label:a11y.filters"></div>
     </div>
@@ -214,6 +215,8 @@
               <span class="ticket__amount" data-plan-price="screening">{{price:screening}}</span>
               <span class="ticket__per" data-i18n="tickets.perMonth"></span>
             </p>
+            <p class="ticket__perday" data-plan-perday="screening"></p>
+            <p class="ticket__spots" data-plan-spots="screening" hidden></p>
             <ul class="ticket__features">
               <li><svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-check"/></svg><span data-i18n="tickets.screening.f1"></span></li>
               <li><svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-check"/></svg><span data-i18n="tickets.screening.f2"></span></li>
@@ -240,6 +243,8 @@
               <span class="ticket__amount" data-plan-price="premiere">{{price:premiere}}</span>
               <span class="ticket__per" data-i18n="tickets.perMonth"></span>
             </p>
+            <p class="ticket__perday" data-plan-perday="premiere"></p>
+            <p class="ticket__spots" data-plan-spots="premiere" hidden></p>
             <ul class="ticket__features">
               <li><svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-check"/></svg><span data-i18n="tickets.premiere.f1"></span></li>
               <li><svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-check"/></svg><span data-i18n="tickets.premiere.f2"></span></li>
@@ -266,6 +271,8 @@
               <span class="ticket__amount" data-plan-price="blockbuster">{{price:blockbuster}}</span>
               <span class="ticket__per" data-i18n="tickets.perMonth"></span>
             </p>
+            <p class="ticket__perday" data-plan-perday="blockbuster"></p>
+            <p class="ticket__spots" data-plan-spots="blockbuster" hidden></p>
             <ul class="ticket__features">
               <li><svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-check"/></svg><span data-i18n="tickets.blockbuster.f1"></span></li>
               <li><svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-check"/></svg><span data-i18n="tickets.blockbuster.f2"></span></li>
@@ -281,6 +288,12 @@
             <span class="ticket__serial">№ 003</span>
           </div>
         </li>
+      </ul>
+
+      <ul class="trust reveal">
+        <li><svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-check"/></svg><span data-i18n="tickets.trust1"></span></li>
+        <li><svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-shield"/></svg><span data-i18n="tickets.trust2"></span></li>
+        <li><svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-loop"/></svg><span data-i18n="tickets.trust3"></span></li>
       </ul>
 
       <p class="fineprint fineprint--center" data-i18n="tickets.taxNote"></p>
@@ -336,6 +349,18 @@
           <div class="faq__a"><p data-i18n="faq.a10"></p></div>
         </details>
       </div>
+
+      <aside class="invite reveal" aria-labelledby="invite-title">
+        <div class="invite__copy">
+          <p class="eyebrow" data-i18n="share.eyebrow"></p>
+          <h3 class="invite__title" id="invite-title" data-i18n="share.title"></h3>
+          <p class="invite__text" data-i18n="share.text"></p>
+        </div>
+        <button type="button" class="btn btn--outline btn--lg" id="invite-btn">
+          <span data-share-label data-i18n="share.cta"></span>
+          <svg class="btn__icon" width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg>
+        </button>
+      </aside>
     </div>
   </section>
 
@@ -360,6 +385,13 @@
     </div>
   </section>
 </main>
+
+<div class="dock" id="dock" hidden>
+  <a class="btn btn--primary btn--lg" href="submit.html">
+    <span data-i18n="nav.cta"></span>
+    <svg class="btn__icon" width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg>
+  </a>
+</div>
 
 <!-- App details -->
 <dialog class="dialog dialog--app" id="app-dialog" aria-labelledby="app-dialog-title">
@@ -386,7 +418,10 @@
           <p class="fineprint" data-i18n="app.externalNote"></p>
         </div>
         <p class="fineprint app-detail__note" id="app-dialog-note"></p>
-        <a class="dialog__link" href="guidelines.html#report" data-i18n="app.report"></a>
+        <div class="app-detail__foot">
+          <button type="button" class="btn btn--ghost btn--sm" id="app-dialog-share"><span data-share-label data-i18n="share.app"></span></button>
+          <a class="dialog__link" href="guidelines.html#report" data-i18n="app.report"></a>
+        </div>
       </div>
     </div>
   </div>

@@ -16,6 +16,7 @@ import { qs, qsa, el, icon, safeHttpsUrl, safeAssetPath, safeColor, clamp } from
 import { t, localized, onLanguageChange } from './i18n.js';
 import { isMotionOff } from './motion.js';
 import { track } from './analytics.js';
+import { share, shareUrl } from './share.js';
 
 const TIERS = ['blockbuster', 'premiere', 'screening'];
 const CATEGORIES = [
@@ -46,6 +47,7 @@ let headliner = null;
 let dialog = null;
 let lastTrigger = null;
 let onHeadlinerChange = null;
+let siteConfig = null;
 
 /* --------------------------------- data ---------------------------------- */
 
@@ -371,6 +373,20 @@ function initDialog() {
   dialog = qs('#app-dialog');
   if (!dialog) return;
   qs('#app-dialog-close').addEventListener('click', closeDialog);
+  const shareButton = qs('#app-dialog-share');
+  if (shareButton) {
+    shareButton.addEventListener('click', () => {
+      const app = apps.find((candidate) => candidate.id === dialog.dataset.app);
+      if (!app || !siteConfig) return;
+      share({
+        title: app.name,
+        text: t('share.appMessage', { app: app.name }),
+        url: shareUrl(siteConfig, { app: app.id }),
+        button: shareButton,
+        kind: 'listing',
+      });
+    });
+  }
   dialog.addEventListener('click', (event) => {
     if (event.target === dialog) closeDialog();
   });
@@ -387,8 +403,10 @@ function pickHeadliner() {
   const real = top.filter((app) => !app.demo);
   const pool = real.length ? real : top;
   if (!pool.length) return null;
-  // Rotation: every page view picks one of the Blockbuster listings.
-  return pool[Math.floor(Math.random() * pool.length)];
+  // Rotation: the headliner changes every day, so each Blockbuster listing
+  // gets its turn and returning visitors meet a new one.
+  const day = Math.floor(Date.now() / 86400000);
+  return pool[day % pool.length];
 }
 
 function renderHeadliner() {
@@ -406,9 +424,23 @@ export function getHeadliner() {
   return headliner;
 }
 
+/** How many real (non-example) listings there are, optionally for one tier. */
+export function realCount(tier) {
+  return apps.filter((app) => !app.demo && (!tier || app.tier === tier)).length;
+}
+
+/** Open a listing by its id, for links such as index.html?app=my-app */
+export function openAppById(id) {
+  const app = apps.find((candidate) => candidate.id === id);
+  if (!app) return false;
+  openDialog(app, null);
+  return true;
+}
+
 /* ---------------------------------- init --------------------------------- */
 
-export async function initShowcase({ onHeadliner } = {}) {
+export async function initShowcase({ config, onHeadliner } = {}) {
+  siteConfig = config || null;
   onHeadlinerChange = onHeadliner || null;
   initDialog();
   initStripNav();
