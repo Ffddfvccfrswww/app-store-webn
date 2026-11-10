@@ -402,6 +402,28 @@ main:focus {
   transform: scaleX(-1);
 }
 
+/* The automatic-renewal notice sits right next to the prices, where the law expects it. */
+.renew-note {
+  max-width: 70ch;
+  margin-inline: auto;
+  margin-block-end: 1rem;
+  font-size: 0.95rem;
+  text-align: center;
+  color: var(--c-text);
+}
+
+.renew-note--start {
+  margin-inline: 0;
+  margin-block-end: 0;
+  text-align: start;
+  font-size: 0.88rem;
+  color: var(--c-muted);
+}
+
+.renew-note a {
+  color: var(--c-amber-hi);
+}
+
 /* While a translation is loading, hold back the text it will replace. */
 .i18n-pending [data-i18n],
 .i18n-pending [data-i18n-rich] {

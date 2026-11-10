@@ -1,0 +1,4 @@
+# Netlify: the finished site is the docs/ folder. No build step is needed.
+# Security and caching headers are read from docs/_headers.
+[build]
+  publish = "docs"

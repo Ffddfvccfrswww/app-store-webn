@@ -8,15 +8,42 @@
       "title": "App einreichen — {brand}",
       "desc": "Reichen Sie Ihre App bei {brand} ein. Wählen Sie ein Monatsticket, erzählen Sie uns von Ihrer App, und wir prüfen sie von Hand."
     },
-    "thanks": { "title": "Vielen Dank — {brand}", "desc": "Danke, dass Sie sich für {brand} entschieden haben." },
-    "notFound": { "title": "Szene fehlt — {brand}", "desc": "Die gesuchte Seite wurde nicht gefunden." },
-    "privacy": { "title": "Datenschutzerklärung — {brand}", "desc": "Wie {brand} mit personenbezogenen Daten umgeht." },
-    "terms": { "title": "Nutzungsbedingungen — {brand}", "desc": "Die Bedingungen für die Nutzung von {brand}." },
-    "cookies": { "title": "Cookie-Richtlinie — {brand}", "desc": "Was {brand} auf Ihrem Gerät speichert und warum." },
-    "refunds": { "title": "Erstattungsrichtlinie — {brand}", "desc": "Kündigung, Erstattung und Widerrufsrecht bei {brand}." },
-    "guidelines": { "title": "Inhaltsrichtlinien — {brand}", "desc": "Was bei {brand} gezeigt werden darf und wie Sie einen Eintrag melden." },
-    "accessibility": { "title": "Barrierefreiheit — {brand}", "desc": "Die Erklärung zur Barrierefreiheit von {brand}." },
-    "notice": { "title": "Impressum — {brand}", "desc": "Wer {brand} betreibt und wie Sie uns erreichen." }
+    "thanks": {
+      "title": "Vielen Dank — {brand}",
+      "desc": "Danke, dass Sie sich für {brand} entschieden haben."
+    },
+    "notFound": {
+      "title": "Szene fehlt — {brand}",
+      "desc": "Die gesuchte Seite wurde nicht gefunden."
+    },
+    "privacy": {
+      "title": "Datenschutzerklärung — {brand}",
+      "desc": "Wie {brand} mit personenbezogenen Daten umgeht."
+    },
+    "terms": {
+      "title": "Nutzungsbedingungen — {brand}",
+      "desc": "Die Bedingungen für die Nutzung von {brand}."
+    },
+    "cookies": {
+      "title": "Cookie-Richtlinie — {brand}",
+      "desc": "Was {brand} auf Ihrem Gerät speichert und warum."
+    },
+    "refunds": {
+      "title": "Erstattungsrichtlinie — {brand}",
+      "desc": "Kündigung, Erstattung und Widerrufsrecht bei {brand}."
+    },
+    "guidelines": {
+      "title": "Inhaltsrichtlinien — {brand}",
+      "desc": "Was bei {brand} gezeigt werden darf und wie Sie einen Eintrag melden."
+    },
+    "accessibility": {
+      "title": "Barrierefreiheit — {brand}",
+      "desc": "Die Erklärung zur Barrierefreiheit von {brand}."
+    },
+    "notice": {
+      "title": "Impressum — {brand}",
+      "desc": "Wer {brand} betreibt und wie Sie uns erreichen."
+    }
   },
   "a11y": {
     "skip": "Zum Hauptinhalt springen",
@@ -64,10 +91,22 @@
   "production": {
     "eyebrow": "Akt II — Die Produktion",
     "title": "So entsteht Ihre Premiere",
-    "s1": { "title": "App einreichen", "text": "Erzählen Sie uns von Ihrer App und wählen Sie ein Ticket. Das dauert wenige Minuten und erfordert keine technischen Kenntnisse." },
-    "s2": { "title": "Wir prüfen sie", "text": "Ein Mensch prüft jede Einreichung anhand unserer Inhaltsrichtlinien. Apps, die Menschen täuschen oder ihnen schaden, bekommen keine Bühne." },
-    "s3": { "title": "Ihr Plakat hängt", "text": "Wir gestalten Ihren Eintrag: ein Filmplakat, Ihr Slogan und direkte Links zu Ihren Store-Seiten." },
-    "s4": { "title": "Vorstellung, jeden Monat", "text": "Ihre App bleibt auf der Leinwand, solange Ihr Tarif läuft. Wechseln oder kündigen Sie, wann immer Sie möchten." }
+    "s1": {
+      "title": "App einreichen",
+      "text": "Erzählen Sie uns von Ihrer App und wählen Sie ein Ticket. Das dauert wenige Minuten und erfordert keine technischen Kenntnisse."
+    },
+    "s2": {
+      "title": "Wir prüfen sie",
+      "text": "Ein Mensch prüft jede Einreichung anhand unserer Inhaltsrichtlinien. Apps, die Menschen täuschen oder ihnen schaden, bekommen keine Bühne."
+    },
+    "s3": {
+      "title": "Ihr Plakat hängt",
+      "text": "Wir gestalten Ihren Eintrag: ein Filmplakat, Ihr Slogan und direkte Links zu Ihren Store-Seiten."
+    },
+    "s4": {
+      "title": "Vorstellung, jeden Monat",
+      "text": "Ihre App bleibt auf der Leinwand, solange Ihr Tarif läuft. Wechseln oder kündigen Sie, wann immer Sie möchten."
+    }
   },
   "showing": {
     "eyebrow": "Akt III — Das Programm",
@@ -120,10 +159,22 @@
   "honest": {
     "eyebrow": "Unsere Hausordnung",
     "title": "Ehrlich aus Prinzip",
-    "i1": { "title": "Werbung sieht aus wie Werbung", "text": "Jede bezahlte Platzierung trägt sichtbar den Hinweis „Gesponsert“. Keine Schleichwerbung, niemals." },
-    "i2": { "title": "Kein Besucher-Tracking", "text": "Keine Werbe-Cookies, keine Profile, kein Datenverkauf. Die Website speichert nur Ihre Sprache und Ihre Datenschutz-Einstellungen, und zwar auf Ihrem eigenen Gerät." },
-    "i3": { "title": "Jede App wird geprüft", "text": "Wir prüfen Einreichungen von Hand und entfernen Einträge, die gegen unsere Richtlinien verstoßen." },
-    "i4": { "title": "Keine Bindung", "text": "Tarife verlängern sich monatlich. Kündigen Sie jederzeit; Ihr Eintrag bleibt bis zum Ende des bezahlten Zeitraums sichtbar." }
+    "i1": {
+      "title": "Werbung sieht aus wie Werbung",
+      "text": "Jede bezahlte Platzierung trägt sichtbar den Hinweis „Gesponsert“. Keine Schleichwerbung, niemals."
+    },
+    "i2": {
+      "title": "Kein Besucher-Tracking",
+      "text": "Keine Werbe-Cookies, keine Profile, kein Datenverkauf. Die Website speichert nur Ihre Sprache und Ihre Datenschutz-Einstellungen, und zwar auf Ihrem eigenen Gerät."
+    },
+    "i3": {
+      "title": "Jede App wird geprüft",
+      "text": "Wir prüfen Einreichungen von Hand und entfernen Einträge, die gegen unsere Richtlinien verstoßen."
+    },
+    "i4": {
+      "title": "Keine Bindung",
+      "text": "Tarife verlängern sich monatlich. Kündigen Sie jederzeit; Ihr Eintrag bleibt bis zum Ende des bezahlten Zeitraums sichtbar."
+    }
   },
   "tickets": {
     "eyebrow": "Akt IV — Die Kinokasse",
@@ -164,7 +215,8 @@
     "trust3": "Jederzeit kündbar",
     "spotsOpen": "{left} von {total} Plätzen frei",
     "spotsFull": "Alle Plätze sind vergeben",
-    "waitlist": "Auf die Warteliste"
+    "waitlist": "Auf die Warteliste",
+    "renewNote": "Tarife verlängern sich automatisch jeden Monat, bis Sie kündigen. Kündigung und Erstattung erklärt unsere <1>Erstattungsrichtlinie</1>."
   },
   "faq": {
     "eyebrow": "Fragen",
@@ -252,7 +304,9 @@
     "gpc": "Ihr Browser hat ein Global-Privacy-Control-Signal gesendet. Wir respektieren es: Optionaler Speicher bleibt aus.",
     "saved": "Ihre Datenschutz-Auswahl wurde gespeichert."
   },
-  "hud": { "scene": "Szene" },
+  "hud": {
+    "scene": "Szene"
+  },
   "submit": {
     "eyebrow": "Casting",
     "title": "App einreichen",

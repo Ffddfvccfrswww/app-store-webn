@@ -8,15 +8,42 @@
       "title": "Envie seu app — {brand}",
       "desc": "Envie seu app para {brand}. Escolha um ingresso mensal, conte-nos sobre seu app e nós o analisaremos manualmente."
     },
-    "thanks": { "title": "Obrigado — {brand}", "desc": "Obrigado por escolher {brand}." },
-    "notFound": { "title": "Cena ausente — {brand}", "desc": "A página que você procurava não foi encontrada." },
-    "privacy": { "title": "Política de Privacidade — {brand}", "desc": "Como {brand} trata dados pessoais." },
-    "terms": { "title": "Termos de Serviço — {brand}", "desc": "Os termos que se aplicam ao uso de {brand}." },
-    "cookies": { "title": "Política de Cookies — {brand}", "desc": "O que {brand} guarda no seu dispositivo e por quê." },
-    "refunds": { "title": "Política de Reembolso — {brand}", "desc": "Cancelamentos, reembolsos e direito de arrependimento em {brand}." },
-    "guidelines": { "title": "Diretrizes de Conteúdo — {brand}", "desc": "O que pode ser anunciado em {brand} e como denunciar um anúncio." },
-    "accessibility": { "title": "Acessibilidade — {brand}", "desc": "A declaração de acessibilidade de {brand}." },
-    "notice": { "title": "Aviso Legal — {brand}", "desc": "Quem opera {brand} e como entrar em contato." }
+    "thanks": {
+      "title": "Obrigado — {brand}",
+      "desc": "Obrigado por escolher {brand}."
+    },
+    "notFound": {
+      "title": "Cena ausente — {brand}",
+      "desc": "A página que você procurava não foi encontrada."
+    },
+    "privacy": {
+      "title": "Política de Privacidade — {brand}",
+      "desc": "Como {brand} trata dados pessoais."
+    },
+    "terms": {
+      "title": "Termos de Serviço — {brand}",
+      "desc": "Os termos que se aplicam ao uso de {brand}."
+    },
+    "cookies": {
+      "title": "Política de Cookies — {brand}",
+      "desc": "O que {brand} guarda no seu dispositivo e por quê."
+    },
+    "refunds": {
+      "title": "Política de Reembolso — {brand}",
+      "desc": "Cancelamentos, reembolsos e direito de arrependimento em {brand}."
+    },
+    "guidelines": {
+      "title": "Diretrizes de Conteúdo — {brand}",
+      "desc": "O que pode ser anunciado em {brand} e como denunciar um anúncio."
+    },
+    "accessibility": {
+      "title": "Acessibilidade — {brand}",
+      "desc": "A declaração de acessibilidade de {brand}."
+    },
+    "notice": {
+      "title": "Aviso Legal — {brand}",
+      "desc": "Quem opera {brand} e como entrar em contato."
+    }
   },
   "a11y": {
     "skip": "Ir para o conteúdo principal",
@@ -64,10 +91,22 @@
   "production": {
     "eyebrow": "Ato II — A produção",
     "title": "Como sua estreia é feita",
-    "s1": { "title": "Envie seu app", "text": "Conte-nos sobre seu app e escolha um ingresso. Leva poucos minutos e não exige conhecimento técnico." },
-    "s2": { "title": "Nós analisamos", "text": "Uma pessoa confere cada envio de acordo com nossas diretrizes de conteúdo. Apps que enganam ou prejudicam pessoas não sobem ao palco." },
-    "s3": { "title": "Seu pôster entra em cartaz", "text": "Criamos seu anúncio: um pôster cinematográfico, seu slogan e links diretos para suas páginas nas lojas." },
-    "s4": { "title": "Sessão todo mês", "text": "Seu app fica na tela enquanto o plano estiver ativo. Troque de plano ou cancele quando quiser." }
+    "s1": {
+      "title": "Envie seu app",
+      "text": "Conte-nos sobre seu app e escolha um ingresso. Leva poucos minutos e não exige conhecimento técnico."
+    },
+    "s2": {
+      "title": "Nós analisamos",
+      "text": "Uma pessoa confere cada envio de acordo com nossas diretrizes de conteúdo. Apps que enganam ou prejudicam pessoas não sobem ao palco."
+    },
+    "s3": {
+      "title": "Seu pôster entra em cartaz",
+      "text": "Criamos seu anúncio: um pôster cinematográfico, seu slogan e links diretos para suas páginas nas lojas."
+    },
+    "s4": {
+      "title": "Sessão todo mês",
+      "text": "Seu app fica na tela enquanto o plano estiver ativo. Troque de plano ou cancele quando quiser."
+    }
   },
   "showing": {
     "eyebrow": "Ato III — A programação",
@@ -120,10 +159,22 @@
   "honest": {
     "eyebrow": "As regras da casa",
     "title": "Honestidade de fábrica",
-    "i1": { "title": "Anúncio tem cara de anúncio", "text": "Cada espaço pago traz a etiqueta visível “Patrocinado”. Nada de publicidade disfarçada, nunca." },
-    "i2": { "title": "Sem rastreamento de visitantes", "text": "Sem cookies de publicidade, sem perfis, sem venda de dados. O site guarda apenas seu idioma e suas escolhas de privacidade, no seu próprio dispositivo." },
-    "i3": { "title": "Todo app é analisado", "text": "Conferimos os envios manualmente e removemos anúncios que descumprem nossas diretrizes." },
-    "i4": { "title": "Sem amarras", "text": "Os planos são renovados todo mês. Cancele quando quiser e seu anúncio fica no ar até o fim do período pago." }
+    "i1": {
+      "title": "Anúncio tem cara de anúncio",
+      "text": "Cada espaço pago traz a etiqueta visível “Patrocinado”. Nada de publicidade disfarçada, nunca."
+    },
+    "i2": {
+      "title": "Sem rastreamento de visitantes",
+      "text": "Sem cookies de publicidade, sem perfis, sem venda de dados. O site guarda apenas seu idioma e suas escolhas de privacidade, no seu próprio dispositivo."
+    },
+    "i3": {
+      "title": "Todo app é analisado",
+      "text": "Conferimos os envios manualmente e removemos anúncios que descumprem nossas diretrizes."
+    },
+    "i4": {
+      "title": "Sem amarras",
+      "text": "Os planos são renovados todo mês. Cancele quando quiser e seu anúncio fica no ar até o fim do período pago."
+    }
   },
   "tickets": {
     "eyebrow": "Ato IV — A bilheteria",
@@ -164,7 +215,8 @@
     "trust3": "Cancele quando quiser",
     "spotsOpen": "{left} de {total} vagas livres",
     "spotsFull": "Todas as vagas estão ocupadas",
-    "waitlist": "Entrar na lista de espera"
+    "waitlist": "Entrar na lista de espera",
+    "renewNote": "Os planos são renovados automaticamente todo mês até você cancelar. O cancelamento e os reembolsos são explicados na nossa <1>Política de Reembolso</1>."
   },
   "faq": {
     "eyebrow": "Perguntas",
@@ -252,7 +304,9 @@
     "gpc": "Seu navegador enviou um sinal de Global Privacy Control. Nós o respeitamos: o armazenamento opcional permanece desativado.",
     "saved": "Suas escolhas de privacidade foram salvas."
   },
-  "hud": { "scene": "Cena" },
+  "hud": {
+    "scene": "Cena"
+  },
   "submit": {
     "eyebrow": "Teste de elenco",
     "title": "Envie seu app",

@@ -8,15 +8,42 @@
       "title": "Envía tu app — {brand}",
       "desc": "Envía tu app a {brand}. Elige una entrada mensual, cuéntanos sobre tu app y la revisaremos a mano."
     },
-    "thanks": { "title": "Gracias — {brand}", "desc": "Gracias por elegir {brand}." },
-    "notFound": { "title": "Falta la escena — {brand}", "desc": "No se ha encontrado la página que buscabas." },
-    "privacy": { "title": "Política de privacidad — {brand}", "desc": "Cómo trata {brand} los datos personales." },
-    "terms": { "title": "Condiciones del servicio — {brand}", "desc": "Las condiciones que se aplican al usar {brand}." },
-    "cookies": { "title": "Política de cookies — {brand}", "desc": "Qué guarda {brand} en tu dispositivo y por qué." },
-    "refunds": { "title": "Política de reembolsos — {brand}", "desc": "Cancelaciones, reembolsos y derecho de desistimiento en {brand}." },
-    "guidelines": { "title": "Normas de contenido — {brand}", "desc": "Qué se puede publicar en {brand} y cómo denunciar un anuncio." },
-    "accessibility": { "title": "Accesibilidad — {brand}", "desc": "Declaración de accesibilidad de {brand}." },
-    "notice": { "title": "Aviso legal — {brand}", "desc": "Quién gestiona {brand} y cómo contactar." }
+    "thanks": {
+      "title": "Gracias — {brand}",
+      "desc": "Gracias por elegir {brand}."
+    },
+    "notFound": {
+      "title": "Falta la escena — {brand}",
+      "desc": "No se ha encontrado la página que buscabas."
+    },
+    "privacy": {
+      "title": "Política de privacidad — {brand}",
+      "desc": "Cómo trata {brand} los datos personales."
+    },
+    "terms": {
+      "title": "Condiciones del servicio — {brand}",
+      "desc": "Las condiciones que se aplican al usar {brand}."
+    },
+    "cookies": {
+      "title": "Política de cookies — {brand}",
+      "desc": "Qué guarda {brand} en tu dispositivo y por qué."
+    },
+    "refunds": {
+      "title": "Política de reembolsos — {brand}",
+      "desc": "Cancelaciones, reembolsos y derecho de desistimiento en {brand}."
+    },
+    "guidelines": {
+      "title": "Normas de contenido — {brand}",
+      "desc": "Qué se puede publicar en {brand} y cómo denunciar un anuncio."
+    },
+    "accessibility": {
+      "title": "Accesibilidad — {brand}",
+      "desc": "Declaración de accesibilidad de {brand}."
+    },
+    "notice": {
+      "title": "Aviso legal — {brand}",
+      "desc": "Quién gestiona {brand} y cómo contactar."
+    }
   },
   "a11y": {
     "skip": "Saltar al contenido principal",
@@ -64,10 +91,22 @@
   "production": {
     "eyebrow": "Acto II — La producción",
     "title": "Así se prepara tu estreno",
-    "s1": { "title": "Envía tu app", "text": "Cuéntanos sobre tu app y elige una entrada. Lleva unos minutos y no requiere conocimientos técnicos." },
-    "s2": { "title": "La revisamos", "text": "Una persona comprueba cada envío según nuestras normas de contenido. Las apps que engañan o perjudican a la gente no suben al escenario." },
-    "s3": { "title": "Colgamos tu póster", "text": "Creamos tu anuncio: un póster cinematográfico, tu eslogan y enlaces directos a tus páginas en las tiendas." },
-    "s4": { "title": "Función cada mes", "text": "Tu app sigue en pantalla mientras tu plan esté activo. Cambia de plan o cancela cuando quieras." }
+    "s1": {
+      "title": "Envía tu app",
+      "text": "Cuéntanos sobre tu app y elige una entrada. Lleva unos minutos y no requiere conocimientos técnicos."
+    },
+    "s2": {
+      "title": "La revisamos",
+      "text": "Una persona comprueba cada envío según nuestras normas de contenido. Las apps que engañan o perjudican a la gente no suben al escenario."
+    },
+    "s3": {
+      "title": "Colgamos tu póster",
+      "text": "Creamos tu anuncio: un póster cinematográfico, tu eslogan y enlaces directos a tus páginas en las tiendas."
+    },
+    "s4": {
+      "title": "Función cada mes",
+      "text": "Tu app sigue en pantalla mientras tu plan esté activo. Cambia de plan o cancela cuando quieras."
+    }
   },
   "showing": {
     "eyebrow": "Acto III — El programa",
@@ -120,10 +159,22 @@
   "honest": {
     "eyebrow": "Las normas de la casa",
     "title": "Honestidad de serie",
-    "i1": { "title": "Los anuncios parecen anuncios", "text": "Cada espacio de pago lleva una etiqueta visible de «Patrocinado». Nada de publicidad encubierta, nunca." },
-    "i2": { "title": "Sin rastreo de visitantes", "text": "Sin cookies publicitarias, sin perfiles y sin venta de datos. El sitio solo guarda tu idioma y tus preferencias de privacidad, en tu propio dispositivo." },
-    "i3": { "title": "Revisamos cada app", "text": "Comprobamos los envíos a mano y retiramos los anuncios que incumplen nuestras normas." },
-    "i4": { "title": "Sin ataduras", "text": "Los planes se renuevan cada mes. Cancela cuando quieras y tu anuncio seguirá visible hasta el final del periodo pagado." }
+    "i1": {
+      "title": "Los anuncios parecen anuncios",
+      "text": "Cada espacio de pago lleva una etiqueta visible de «Patrocinado». Nada de publicidad encubierta, nunca."
+    },
+    "i2": {
+      "title": "Sin rastreo de visitantes",
+      "text": "Sin cookies publicitarias, sin perfiles y sin venta de datos. El sitio solo guarda tu idioma y tus preferencias de privacidad, en tu propio dispositivo."
+    },
+    "i3": {
+      "title": "Revisamos cada app",
+      "text": "Comprobamos los envíos a mano y retiramos los anuncios que incumplen nuestras normas."
+    },
+    "i4": {
+      "title": "Sin ataduras",
+      "text": "Los planes se renuevan cada mes. Cancela cuando quieras y tu anuncio seguirá visible hasta el final del periodo pagado."
+    }
   },
   "tickets": {
     "eyebrow": "Acto IV — La taquilla",
@@ -164,7 +215,8 @@
     "trust3": "Cancela cuando quieras",
     "spotsOpen": "{left} de {total} plazas libres",
     "spotsFull": "Todas las plazas están ocupadas",
-    "waitlist": "Apuntarme a la lista de espera"
+    "waitlist": "Apuntarme a la lista de espera",
+    "renewNote": "Los planes se renuevan automáticamente cada mes hasta que canceles. La cancelación y los reembolsos se explican en nuestra <1>Política de reembolsos</1>."
   },
   "faq": {
     "eyebrow": "Preguntas",
@@ -252,7 +304,9 @@
     "gpc": "Tu navegador ha enviado una señal de Global Privacy Control. La respetamos: el almacenamiento opcional sigue desactivado.",
     "saved": "Se han guardado tus preferencias de privacidad."
   },
-  "hud": { "scene": "Escena" },
+  "hud": {
+    "scene": "Escena"
+  },
   "submit": {
     "eyebrow": "Casting",
     "title": "Envía tu app",

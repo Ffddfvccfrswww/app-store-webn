@@ -215,7 +215,8 @@
     "trust3": "Cancel anytime",
     "spotsOpen": "{left} of {total} spots open",
     "spotsFull": "All spots are taken",
-    "waitlist": "Join the waiting list"
+    "waitlist": "Join the waiting list",
+    "renewNote": "Plans renew automatically every month until you cancel. Cancellation and refunds are explained in our <1>Refund Policy</1>."
   },
   "faq": {
     "eyebrow": "Questions",

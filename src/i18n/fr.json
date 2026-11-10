@@ -8,15 +8,42 @@
       "title": "Proposer votre appli — {brand}",
       "desc": "Proposez votre appli à {brand}. Choisissez un billet mensuel, parlez-nous de votre appli et nous l'examinerons à la main."
     },
-    "thanks": { "title": "Merci — {brand}", "desc": "Merci d'avoir choisi {brand}." },
-    "notFound": { "title": "Scène manquante — {brand}", "desc": "La page que vous cherchez est introuvable." },
-    "privacy": { "title": "Politique de confidentialité — {brand}", "desc": "Comment {brand} traite les données personnelles." },
-    "terms": { "title": "Conditions d'utilisation — {brand}", "desc": "Les conditions applicables à l'utilisation de {brand}." },
-    "cookies": { "title": "Politique relative aux cookies — {brand}", "desc": "Ce que {brand} enregistre sur votre appareil et pourquoi." },
-    "refunds": { "title": "Politique de remboursement — {brand}", "desc": "Résiliations, remboursements et droit de rétractation chez {brand}." },
-    "guidelines": { "title": "Règles de contenu — {brand}", "desc": "Ce qui peut être publié sur {brand} et comment signaler une annonce." },
-    "accessibility": { "title": "Accessibilité — {brand}", "desc": "La déclaration d'accessibilité de {brand}." },
-    "notice": { "title": "Mentions légales — {brand}", "desc": "Qui exploite {brand} et comment nous contacter." }
+    "thanks": {
+      "title": "Merci — {brand}",
+      "desc": "Merci d'avoir choisi {brand}."
+    },
+    "notFound": {
+      "title": "Scène manquante — {brand}",
+      "desc": "La page que vous cherchez est introuvable."
+    },
+    "privacy": {
+      "title": "Politique de confidentialité — {brand}",
+      "desc": "Comment {brand} traite les données personnelles."
+    },
+    "terms": {
+      "title": "Conditions d'utilisation — {brand}",
+      "desc": "Les conditions applicables à l'utilisation de {brand}."
+    },
+    "cookies": {
+      "title": "Politique relative aux cookies — {brand}",
+      "desc": "Ce que {brand} enregistre sur votre appareil et pourquoi."
+    },
+    "refunds": {
+      "title": "Politique de remboursement — {brand}",
+      "desc": "Résiliations, remboursements et droit de rétractation chez {brand}."
+    },
+    "guidelines": {
+      "title": "Règles de contenu — {brand}",
+      "desc": "Ce qui peut être publié sur {brand} et comment signaler une annonce."
+    },
+    "accessibility": {
+      "title": "Accessibilité — {brand}",
+      "desc": "La déclaration d'accessibilité de {brand}."
+    },
+    "notice": {
+      "title": "Mentions légales — {brand}",
+      "desc": "Qui exploite {brand} et comment nous contacter."
+    }
   },
   "a11y": {
     "skip": "Aller au contenu principal",
@@ -64,10 +91,22 @@
   "production": {
     "eyebrow": "Acte II — La production",
     "title": "Comment se prépare votre première",
-    "s1": { "title": "Proposez votre appli", "text": "Parlez-nous de votre appli et choisissez un billet. Cela prend quelques minutes et ne demande aucune compétence technique." },
-    "s2": { "title": "Nous l'examinons", "text": "Une personne vérifie chaque proposition au regard de nos règles de contenu. Les applis qui trompent ou nuisent aux gens ne montent pas sur scène." },
-    "s3": { "title": "Votre affiche est posée", "text": "Nous créons votre annonce : une affiche de cinéma, votre slogan et des liens directs vers vos pages en boutique." },
-    "s4": { "title": "En séance chaque mois", "text": "Votre appli reste à l'écran tant que votre formule est active. Changez de formule ou résiliez quand vous voulez." }
+    "s1": {
+      "title": "Proposez votre appli",
+      "text": "Parlez-nous de votre appli et choisissez un billet. Cela prend quelques minutes et ne demande aucune compétence technique."
+    },
+    "s2": {
+      "title": "Nous l'examinons",
+      "text": "Une personne vérifie chaque proposition au regard de nos règles de contenu. Les applis qui trompent ou nuisent aux gens ne montent pas sur scène."
+    },
+    "s3": {
+      "title": "Votre affiche est posée",
+      "text": "Nous créons votre annonce : une affiche de cinéma, votre slogan et des liens directs vers vos pages en boutique."
+    },
+    "s4": {
+      "title": "En séance chaque mois",
+      "text": "Votre appli reste à l'écran tant que votre formule est active. Changez de formule ou résiliez quand vous voulez."
+    }
   },
   "showing": {
     "eyebrow": "Acte III — Le programme",
@@ -120,10 +159,22 @@
   "honest": {
     "eyebrow": "Les règles de la maison",
     "title": "Honnête par principe",
-    "i1": { "title": "Une pub ressemble à une pub", "text": "Chaque emplacement payant porte une mention « Sponsorisé » bien visible. Jamais de publicité déguisée." },
-    "i2": { "title": "Aucun pistage des visiteurs", "text": "Pas de cookies publicitaires, pas de profilage, pas de vente de données. Le site n'enregistre que votre langue et vos choix de confidentialité, sur votre propre appareil." },
-    "i3": { "title": "Chaque appli est vérifiée", "text": "Nous contrôlons les propositions à la main et retirons les annonces qui enfreignent nos règles." },
-    "i4": { "title": "Sans engagement", "text": "Les formules se renouvellent chaque mois. Résiliez quand vous voulez : votre annonce reste en ligne jusqu'à la fin de la période payée." }
+    "i1": {
+      "title": "Une pub ressemble à une pub",
+      "text": "Chaque emplacement payant porte une mention « Sponsorisé » bien visible. Jamais de publicité déguisée."
+    },
+    "i2": {
+      "title": "Aucun pistage des visiteurs",
+      "text": "Pas de cookies publicitaires, pas de profilage, pas de vente de données. Le site n'enregistre que votre langue et vos choix de confidentialité, sur votre propre appareil."
+    },
+    "i3": {
+      "title": "Chaque appli est vérifiée",
+      "text": "Nous contrôlons les propositions à la main et retirons les annonces qui enfreignent nos règles."
+    },
+    "i4": {
+      "title": "Sans engagement",
+      "text": "Les formules se renouvellent chaque mois. Résiliez quand vous voulez : votre annonce reste en ligne jusqu'à la fin de la période payée."
+    }
   },
   "tickets": {
     "eyebrow": "Acte IV — La billetterie",
@@ -164,7 +215,8 @@
     "trust3": "Résiliation à tout moment",
     "spotsOpen": "{left} places libres sur {total}",
     "spotsFull": "Toutes les places sont prises",
-    "waitlist": "Rejoindre la liste d'attente"
+    "waitlist": "Rejoindre la liste d'attente",
+    "renewNote": "Les formules se renouvellent automatiquement chaque mois jusqu'à résiliation. La résiliation et les remboursements sont expliqués dans notre <1>Politique de remboursement</1>."
   },
   "faq": {
     "eyebrow": "Questions",
@@ -252,7 +304,9 @@
     "gpc": "Votre navigateur a envoyé un signal Global Privacy Control. Nous le respectons : le stockage optionnel reste désactivé.",
     "saved": "Vos choix de confidentialité ont été enregistrés."
   },
-  "hud": { "scene": "Scène" },
+  "hud": {
+    "scene": "Scène"
+  },
   "submit": {
     "eyebrow": "Casting",
     "title": "Proposer votre appli",

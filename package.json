@@ -12,7 +12,8 @@
     "test": "node tests/run-all.cjs",
     "test:static": "node tests/static.test.cjs",
     "test:e2e": "node tests/e2e.test.cjs",
-    "test:a11y": "node tests/a11y.test.cjs"
+    "test:a11y": "node tests/a11y.test.cjs",
+    "test:legal": "node tests/legal.test.cjs"
   },
   "devDependencies": {
     "axe-core": "4.14.0"
