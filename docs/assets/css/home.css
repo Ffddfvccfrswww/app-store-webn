@@ -1514,7 +1514,7 @@
   align-items: center;
   min-height: 100vh;
   min-height: 100svh;
-  padding-block: 16vh;
+  padding-block: 13vh 17vh;
   text-align: center;
 }
 
@@ -1525,7 +1525,7 @@
 }
 
 .finale__title {
-  font-size: calc(clamp(3.4rem, 12vw, 13rem) * var(--display-scale));
+  font-size: calc(min(clamp(3.4rem, 11vw, 12rem), 17vh) * var(--display-scale));
   line-height: var(--display-leading);
   letter-spacing: var(--display-tracking);
   text-transform: uppercase;
