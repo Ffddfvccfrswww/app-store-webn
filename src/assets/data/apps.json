@@ -1,0 +1,156 @@
+{
+  "_readme": [
+    "This file lists the apps shown in 'Now Showing'.",
+    "Every entry marked \"demo\": true is a fictitious example. Remove the examples as real listings arrive.",
+    "Fields: id (letters, digits, dashes), name, tagline, description, category, tier (screening | premiere | blockbuster),",
+    "colors (two hex colours for the poster), glyph (wave, orbit, bolt, leaf, note, coin, compass, chat, lens, book, pulse, cube, spark),",
+    "poster (optional image inside assets/apps/, e.g. assets/apps/my-app.webp), links (ios, android, web: https addresses only).",
+    "tagline and description may be plain text or a map of language codes, e.g. { \"en\": \"...\", \"he\": \"...\" }."
+  ],
+  "apps": [
+    {
+      "id": "quillfern",
+      "name": "Quillfern",
+      "demo": true,
+      "tier": "blockbuster",
+      "category": "productivity",
+      "glyph": "leaf",
+      "colors": ["#1f7a6b", "#06201d"],
+      "tagline": {
+        "en": "Notes that grow with you.",
+        "he": "פתקים שגדלים יחד איתך."
+      },
+      "description": {
+        "en": "A calm notebook that links your ideas together as you write, so nothing you care about gets lost.",
+        "he": "מחברת שקטה שמקשרת בין הרעיונות שלך תוך כדי כתיבה, כדי ששום דבר חשוב לא ילך לאיבוד."
+      },
+      "links": {}
+    },
+    {
+      "id": "tidewake",
+      "name": "Tidewake",
+      "demo": true,
+      "tier": "premiere",
+      "category": "health",
+      "glyph": "wave",
+      "colors": ["#2456a6", "#0a1430"],
+      "tagline": {
+        "en": "Fall asleep to the sound of the sea.",
+        "he": "להירדם לצלילי הים."
+      },
+      "description": {
+        "en": "Gentle soundscapes and a sunrise alarm that wakes you slowly, the way mornings should feel.",
+        "he": "נופי צליל עדינים ושעון מעורר שמדמה זריחה ומעיר אותך לאט, כמו שבוקר צריך להרגיש."
+      },
+      "links": {}
+    },
+    {
+      "id": "pennyharbor",
+      "name": "Pennyharbor",
+      "demo": true,
+      "tier": "premiere",
+      "category": "finance",
+      "glyph": "coin",
+      "colors": ["#a8641c", "#2a1304"],
+      "tagline": {
+        "en": "A safe harbour for every coin.",
+        "he": "נמל בטוח לכל מטבע."
+      },
+      "description": {
+        "en": "A simple monthly budget that shows where your money went and how much is safe to spend today.",
+        "he": "תקציב חודשי פשוט שמראה לאן הלך הכסף וכמה בטוח להוציא היום."
+      },
+      "links": {}
+    },
+    {
+      "id": "orbitalia",
+      "name": "Orbitalia",
+      "demo": true,
+      "tier": "premiere",
+      "category": "education",
+      "glyph": "orbit",
+      "colors": ["#6a3fb8", "#150a2e"],
+      "tagline": {
+        "en": "The solar system, small enough to hold.",
+        "he": "מערכת השמש, בגודל שנכנס לכף היד."
+      },
+      "description": {
+        "en": "Children explore planets and moons through short, playful missions designed with teachers.",
+        "he": "ילדים חוקרים כוכבי לכת וירחים במשימות קצרות ומשעשעות שנבנו יחד עם מורים."
+      },
+      "links": {}
+    },
+    {
+      "id": "voltwick",
+      "name": "Voltwick",
+      "demo": true,
+      "tier": "screening",
+      "category": "travel",
+      "glyph": "bolt",
+      "colors": ["#b3791a", "#1c1503"],
+      "tagline": {
+        "en": "Find a charger before you need one.",
+        "he": "למצוא עמדת טעינה לפני שצריך אותה."
+      },
+      "description": {
+        "en": "Plan electric road trips with live charger availability along your route.",
+        "he": "תכנון נסיעות ברכב חשמלי עם זמינות עמדות טעינה בזמן אמת לאורך המסלול."
+      },
+      "links": {}
+    },
+    {
+      "id": "murmur-lane",
+      "name": "Murmur Lane",
+      "demo": true,
+      "tier": "screening",
+      "category": "music",
+      "glyph": "note",
+      "colors": ["#b03a5b", "#2a0713"],
+      "tagline": {
+        "en": "Podcasts for the long way home.",
+        "he": "פודקאסטים לדרך הארוכה הביתה."
+      },
+      "description": {
+        "en": "A quiet podcast player with smart queues and no clutter.",
+        "he": "נגן פודקאסטים שקט עם תורים חכמים ובלי עומס מיותר."
+      },
+      "links": {}
+    },
+    {
+      "id": "northling",
+      "name": "Northling",
+      "demo": true,
+      "tier": "screening",
+      "category": "travel",
+      "glyph": "compass",
+      "colors": ["#2c7a4b", "#07190f"],
+      "tagline": {
+        "en": "Trail maps that work off the grid.",
+        "he": "מפות שבילים שעובדות גם בלי קליטה."
+      },
+      "description": {
+        "en": "Download detailed hiking maps and follow your route without a signal.",
+        "he": "הורדת מפות טיולים מפורטות ומעקב אחרי המסלול גם ללא קליטה."
+      },
+      "links": {}
+    },
+    {
+      "id": "cubeloom",
+      "name": "Cubeloom",
+      "demo": true,
+      "tier": "screening",
+      "category": "games",
+      "glyph": "cube",
+      "colors": ["#2f6f8f", "#07151c"],
+      "tagline": {
+        "en": "One cube. A thousand quiet puzzles.",
+        "he": "קובייה אחת. אלף חידות שקטות."
+      },
+      "description": {
+        "en": "A meditative puzzle game about folding light through a single turning cube.",
+        "he": "משחק חידות מדיטטיבי על קיפול אור דרך קובייה אחת מסתובבת."
+      },
+      "links": {}
+    }
+  ]
+}

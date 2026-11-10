@@ -101,7 +101,7 @@
 .fx__bar {
   position: absolute;
   inset-inline: 0;
-  height: 9vh;
+  height: 7.5vh;
   background: #000;
   transition: transform 0.9s var(--ease-out);
 }
@@ -296,7 +296,7 @@
   align-items: center;
   min-height: 100vh;
   min-height: 100svh;
-  padding-block: calc(var(--header-h) + 5vh) 13vh;
+  padding-block: calc(var(--header-h) + 3vh) 12vh;
 }
 
 .hero::before {
@@ -315,11 +315,11 @@
 .hero__inner {
   display: grid;
   justify-items: start;
-  gap: clamp(1.1rem, 2.2vh, 1.8rem);
+  gap: clamp(0.8rem, 1.9vh, 1.5rem);
 }
 
 .hero__title {
-  font-size: calc(clamp(3.3rem, 9.4vw, 10.4rem) * var(--display-scale));
+  font-size: calc(min(clamp(3.3rem, 8.6vw, 9.8rem), 15.5vh) * var(--display-scale));
   line-height: var(--display-leading);
   letter-spacing: var(--display-tracking);
   text-transform: uppercase;
@@ -385,7 +385,7 @@
 
 .scroll-cue {
   position: absolute;
-  inset-block-end: 11.5vh;
+  inset-block-end: 8.6vh;
   inset-inline-start: 50%;
   transform: translateX(-50%);
   display: inline-flex;
@@ -758,7 +758,7 @@
   padding: clamp(0.9rem, 2vw, 1.5rem) clamp(1.4rem, 3.6vw, 3.2rem);
   border: 1px solid rgba(255, 180, 84, 0.42);
   border-radius: 16px;
-  background: linear-gradient(180deg, rgba(255, 180, 84, 0.1), rgba(255, 143, 61, 0.03));
+  background: linear-gradient(180deg, rgba(46, 27, 8, 0.9), rgba(16, 10, 4, 0.9));
   box-shadow:
     0 0 70px -12px rgba(255, 143, 61, 0.55),
     inset 0 0 46px -14px rgba(255, 143, 61, 0.5);
@@ -1534,8 +1534,12 @@
 
 .finale__lead {
   max-width: 44ch;
+  padding: 0.9rem 1.6rem;
+  border-radius: 999px;
   font-size: clamp(1.05rem, 1.35vw, 1.3rem);
-  color: rgba(244, 238, 227, 0.86);
+  color: var(--c-text);
+  background: radial-gradient(ellipse at center, rgba(5, 7, 10, 0.86) 0%, rgba(5, 7, 10, 0.6) 55%, rgba(5, 7, 10, 0) 78%);
+  text-shadow: 0 1px 14px rgba(0, 0, 0, 0.95);
 }
 
 .credits {
@@ -1544,6 +1548,10 @@
   justify-content: center;
   gap: clamp(1.4rem, 4vw, 3.6rem);
   margin-block-start: clamp(1.2rem, 4vh, 3rem);
+  padding: 0.8rem 2rem;
+  border-radius: 999px;
+  background: radial-gradient(ellipse at center, rgba(5, 7, 10, 0.8) 0%, rgba(5, 7, 10, 0.5) 55%, rgba(5, 7, 10, 0) 78%);
+  text-shadow: 0 1px 12px rgba(0, 0, 0, 0.9);
 }
 
 .credits__row {

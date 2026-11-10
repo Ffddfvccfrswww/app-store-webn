@@ -895,7 +895,7 @@ main:focus {
   z-index: 2;
   padding-block: clamp(3rem, 7vw, 5.5rem) 2.5rem;
   border-block-start: 1px solid var(--c-line-soft);
-  background: linear-gradient(180deg, rgba(5, 7, 10, 0.86), #030507 60%);
+  background: #030507;
   color: var(--c-muted);
   font-size: 0.93rem;
 }

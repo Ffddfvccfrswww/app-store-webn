@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="no-js" data-langs="en,he,ar,es,fr,de,pt,ru,zh,ja" data-rtl="he,ar" data-default-lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src &#39;none&#39;; script-src &#39;self&#39;; style-src &#39;self&#39;; img-src &#39;self&#39;; font-src &#39;self&#39;; connect-src &#39;self&#39;; manifest-src &#39;self&#39;; media-src &#39;self&#39;; object-src &#39;none&#39;; frame-src &#39;none&#39;; worker-src &#39;none&#39;; base-uri &#39;none&#39;; form-action &#39;self&#39;; require-trusted-types-for &#39;script&#39;; trusted-types site-loader">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title data-i18n="meta.home.title">ZARKOR — Every app deserves a premiere</title>
+<meta name="description" data-i18n-attr="content:meta.home.desc" content="ZARKOR is a cinematic 3D showcase for apps. Put your app in the spotlight in ten languages with a clearly labeled sponsored listing. Monthly plans, cancel anytime.">
+<meta name="robots" content="index, follow">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#05070a">
+<meta name="format-detection" content="telephone=no">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ZARKOR">
+<meta property="og:title" data-i18n-attr="content:meta.home.title" content="ZARKOR — Every app deserves a premiere">
+<meta property="og:description" data-i18n-attr="content:meta.home.desc" content="ZARKOR is a cinematic 3D showcase for apps. Put your app in the spotlight in ten languages with a clearly labeled sponsored listing. Monthly plans, cancel anytime.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<link rel="preload" href="assets/fonts/oswald-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/rubik-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/core.css">
+<meta property="og:image" content="assets/img/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<link rel="stylesheet" href="assets/css/home.css">
+<script src="assets/js/boot.js"></script>
+<script type="module" src="assets/js/main.js"></script>
+</head>
+<body class="page-home" data-page="home">
+<a class="skip-link" href="#main" data-i18n="a11y.skip">Skip to main content</a>
+<svg class="sprite" xmlns="http://www.w3.org/2000/svg" width="0" height="0" aria-hidden="true" focusable="false">
+  <defs>
+    <!-- Interface icons -->
+    <symbol id="i-globe" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.6"/>
+      <path d="M3 12h18M12 3c2.7 2.6 4 5.6 4 9s-1.3 6.4-4 9c-2.7-2.6-4-5.6-4-9s1.3-6.4 4-9z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="i-pause" viewBox="0 0 24 24">
+      <rect x="6.5" y="5" width="3.6" height="14" rx="1" fill="currentColor"/>
+      <rect x="13.9" y="5" width="3.6" height="14" rx="1" fill="currentColor"/>
+    </symbol>
+    <symbol id="i-play" viewBox="0 0 24 24">
+      <path d="M8 5.2v13.6a.8.8 0 0 0 1.2.7l11-6.8a.8.8 0 0 0 0-1.4l-11-6.8A.8.8 0 0 0 8 5.2z" fill="currentColor"/>
+    </symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24">
+      <path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="i-close" viewBox="0 0 24 24">
+      <path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24">
+      <path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="i-chevron" viewBox="0 0 24 24">
+      <path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="i-down" viewBox="0 0 24 24">
+      <path d="M12 4v15M6 13l6 6 6-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="i-check" viewBox="0 0 24 24">
+      <path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24">
+      <path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="i-external" viewBox="0 0 24 24">
+      <path d="M14 5h5v5M19 5l-8 8M11 7H6a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="i-label" viewBox="0 0 24 24">
+      <path d="M3.5 12.6V5a1.5 1.5 0 0 1 1.5-1.5h7.6a1.5 1.5 0 0 1 1 .4l6.5 6.5a1.5 1.5 0 0 1 0 2.2l-7.6 7.5a1.5 1.5 0 0 1-2.1 0L3.9 13.7a1.5 1.5 0 0 1-.4-1.1z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+      <circle cx="8" cy="8" r="1.4" fill="currentColor"/>
+    </symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24">
+      <path d="M12 3l7.5 2.8v5.6c0 4.5-3 8.2-7.5 9.6-4.5-1.4-7.5-5.1-7.5-9.6V5.800z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+      <path d="M8.5 12l2.6 2.600L15.700 9.800" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="i-eye" viewBox="0 0 24 24">
+      <path d="M2.500 12S6 5.500 12 5.500 21.500 12 21.500 12 18 18.500 12 18.500 2.500 12 2.500 12z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+      <circle cx="12" cy="12" r="2.800" fill="none" stroke="currentColor" stroke-width="1.6"/>
+    </symbol>
+    <symbol id="i-loop" viewBox="0 0 24 24">
+      <path d="M4.500 12a7.500 7.500 0 0 1 12.800-5.300L19.500 9M19.500 4.500V9H15M19.500 12a7.500 7.500 0 0 1-12.800 5.300L4.500 15M4.500 19.500V15H9" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="i-star" viewBox="0 0 24 24">
+      <path d="M12 3.200l2.700 5.500 6 .900-4.300 4.200 1 6-5.400-2.800-5.400 2.800 1-6L3.300 9.600l6-.900z" fill="currentColor"/>
+    </symbol>
+
+    <!-- Brand mark: a ring of light with a beam -->
+    <symbol id="i-mark" viewBox="0 0 32 32">
+      <circle cx="16" cy="16" r="12.500" fill="none" stroke="currentColor" stroke-width="2.200"/>
+      <path d="M16 16L29 6.500v19z" fill="currentColor" opacity=".35"/>
+      <circle cx="16" cy="16" r="4.200" fill="currentColor"/>
+    </symbol>
+
+    <!-- Poster glyphs (abstract, not based on any real product) -->
+    <symbol id="g-wave" viewBox="0 0 100 100">
+      <path d="M8 62c14-28 28-28 42 0s28 28 42 0" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round"/>
+      <path d="M8 40c14-28 28-28 42 0s28 28 42 0" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" opacity=".45"/>
+    </symbol>
+    <symbol id="g-orbit" viewBox="0 0 100 100">
+      <circle cx="50" cy="50" r="13" fill="currentColor"/>
+      <ellipse cx="50" cy="50" rx="42" ry="17" fill="none" stroke="currentColor" stroke-width="5" transform="rotate(-28 50 50)"/>
+      <circle cx="84" cy="30" r="5.500" fill="currentColor"/>
+    </symbol>
+    <symbol id="g-bolt" viewBox="0 0 100 100">
+      <path d="M58 6L20 56h24l-6 38 42-54H54z" fill="currentColor"/>
+    </symbol>
+    <symbol id="g-leaf" viewBox="0 0 100 100">
+      <path d="M16 84C12 40 40 14 88 12c2 46-22 76-64 74" fill="none" stroke="currentColor" stroke-width="7" stroke-linejoin="round"/>
+      <path d="M16 84c18-26 36-42 56-54" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="g-note" viewBox="0 0 100 100">
+      <path d="M38 76V20l44-10v54" fill="none" stroke="currentColor" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/>
+      <circle cx="26" cy="76" r="13" fill="currentColor"/>
+      <circle cx="70" cy="66" r="13" fill="currentColor"/>
+    </symbol>
+    <symbol id="g-coin" viewBox="0 0 100 100">
+      <circle cx="50" cy="50" r="38" fill="none" stroke="currentColor" stroke-width="7"/>
+      <path d="M30 62l14-16 12 10 16-20" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="g-compass" viewBox="0 0 100 100">
+      <circle cx="50" cy="50" r="40" fill="none" stroke="currentColor" stroke-width="6"/>
+      <path d="M66 34L56 56 34 66l10-22z" fill="currentColor"/>
+    </symbol>
+    <symbol id="g-chat" viewBox="0 0 100 100">
+      <path d="M14 20h72v46H46L26 84V66H14z" fill="none" stroke="currentColor" stroke-width="7" stroke-linejoin="round"/>
+      <circle cx="36" cy="43" r="5" fill="currentColor"/>
+      <circle cx="50" cy="43" r="5" fill="currentColor"/>
+      <circle cx="64" cy="43" r="5" fill="currentColor"/>
+    </symbol>
+    <symbol id="g-lens" viewBox="0 0 100 100">
+      <circle cx="50" cy="50" r="40" fill="none" stroke="currentColor" stroke-width="6"/>
+      <circle cx="50" cy="50" r="22" fill="none" stroke="currentColor" stroke-width="6"/>
+      <circle cx="50" cy="50" r="8" fill="currentColor"/>
+    </symbol>
+    <symbol id="g-book" viewBox="0 0 100 100">
+      <path d="M50 26C38 16 24 14 10 16v62c14-2 28 0 40 10 12-10 26-12 40-10V16c-14-2-28 0-40 10z" fill="none" stroke="currentColor" stroke-width="7" stroke-linejoin="round"/>
+      <path d="M50 26v62" fill="none" stroke="currentColor" stroke-width="6"/>
+    </symbol>
+    <symbol id="g-pulse" viewBox="0 0 100 100">
+      <path d="M6 54h20l10-28 16 52 12-36 8 12h22" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="g-cube" viewBox="0 0 100 100">
+      <path d="M50 8l38 21v42L50 92 12 71V29z" fill="none" stroke="currentColor" stroke-width="6" stroke-linejoin="round"/>
+      <path d="M12 29l38 21 38-21M50 50v42" fill="none" stroke="currentColor" stroke-width="6" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="g-spark" viewBox="0 0 100 100">
+      <path d="M50 6c4 26 18 40 44 44-26 4-40 18-44 44-4-26-18-40-44-44 26-4 40-18 44-44z" fill="currentColor"/>
+    </symbol>
+  </defs>
+</svg>
+
+<header class="site-header" id="site-header">
+  <div class="site-header__inner">
+    <a class="brand" href="index.html" data-i18n-attr="aria-label:a11y.home" aria-label="ZARKOR — home">
+      <svg class="brand__mark" width="28" height="28" aria-hidden="true" focusable="false"><use href="#i-mark"/></svg>
+      <span class="brand__name" translate="no">ZARKOR</span>
+    </a>
+
+    <nav class="nav" id="site-nav" data-i18n-attr="aria-label:a11y.mainNav" aria-label="Main navigation">
+      <ul class="nav__list">
+        <li><a class="nav__link" href="index.html#showing" data-i18n="nav.showing">Now Showing</a></li>
+        <li><a class="nav__link" href="index.html#production" data-i18n="nav.how">How it works</a></li>
+        <li><a class="nav__link" href="index.html#tickets" data-i18n="nav.tickets">Tickets</a></li>
+        <li><a class="nav__link" href="index.html#faq" data-i18n="nav.faq">FAQ</a></li>
+        <li class="nav__cta"><a class="btn btn--primary" href="submit.html" data-i18n="nav.cta">Premiere your app</a></li>
+      </ul>
+    </nav>
+
+    <div class="site-header__tools">
+      <label class="lang">
+        <span class="sr-only" data-i18n="a11y.language">Language</span>
+        <svg class="lang__icon" width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-globe"/></svg>
+        <select class="lang__select" id="lang-select" autocomplete="off">
+          <option value="en" lang="en">English</option>
+          <option value="he" lang="he">עברית</option>
+          <option value="ar" lang="ar">العربية</option>
+          <option value="es" lang="es">Español</option>
+          <option value="fr" lang="fr">Français</option>
+          <option value="de" lang="de">Deutsch</option>
+          <option value="pt" lang="pt">Português</option>
+          <option value="ru" lang="ru">Русский</option>
+          <option value="zh" lang="zh">中文</option>
+          <option value="ja" lang="ja">日本語</option>
+        </select>
+      </label>
+      <button type="button" class="icon-btn js-motion-toggle" aria-pressed="false" data-i18n-attr="aria-label:a11y.motionPause" aria-label="Pause animations">
+        <svg class="icon-btn__pause" width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-pause"/></svg>
+        <svg class="icon-btn__play" width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-play"/></svg>
+      </button>
+      <a class="btn btn--primary btn--sm header-cta" href="submit.html" data-i18n="nav.cta">Premiere your app</a>
+      <button type="button" class="icon-btn menu-btn" id="menu-btn" aria-expanded="false" aria-controls="site-nav" data-i18n-attr="aria-label:a11y.menuOpen" aria-label="Open menu">
+        <svg class="menu-btn__open" width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-menu"/></svg>
+        <svg class="menu-btn__close" width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-close"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="stage" aria-hidden="true">
+  <div class="stage__fallback"></div>
+  <canvas class="stage__canvas" id="stage-canvas"></canvas>
+  <div class="stage__dim" id="stage-dim"></div>
+</div>
+<div class="fx fx--vignette" aria-hidden="true"></div>
+<div class="fx fx--spot" id="fx-spot" aria-hidden="true"></div>
+<div class="fx fx--bars" aria-hidden="true"><span class="fx__bar fx__bar--top"></span><span class="fx__bar fx__bar--bottom"></span></div>
+
+<div class="hud" aria-hidden="true">
+  <span class="hud__rec"></span>
+  <span class="hud__tc" id="hud-tc">00:00:00:00</span>
+  <span class="hud__sep"></span>
+  <span class="hud__scene"><span data-i18n="hud.scene">Scene</span> <span id="hud-scene">01</span> / <span id="hud-total">07</span></span>
+</div>
+<div class="rail" aria-hidden="true"><span class="rail__fill" id="rail-fill"></span></div>
+
+<div class="leader" id="leader" aria-hidden="true">
+  <div class="leader__frame">
+    <svg class="leader__dial" viewBox="0 0 200 200" focusable="false">
+      <circle cx="100" cy="100" r="92" fill="none" stroke="currentColor" stroke-width="2"/>
+      <circle cx="100" cy="100" r="74" fill="none" stroke="currentColor" stroke-width="1" opacity=".5"/>
+      <path d="M100 0v200M0 100h200" stroke="currentColor" stroke-width="1" opacity=".5"/>
+    </svg>
+    <span class="leader__sweep"></span>
+    <span class="leader__count leader__count--3">3</span>
+    <span class="leader__count leader__count--2">2</span>
+    <span class="leader__count leader__count--1">1</span>
+  </div>
+</div>
+
+<main id="main" class="home" tabindex="-1">
+
+  <!-- ===================== OPENING SHOT ===================== -->
+  <section class="hero" id="top" data-shot="hero" aria-labelledby="hero-title">
+    <div class="shell hero__inner">
+      <p class="eyebrow reveal"><span class="eyebrow__dot" aria-hidden="true"></span><span data-i18n="hero.eyebrow">A cinematic stage for apps</span></p>
+      <h1 class="hero__title" id="hero-title">
+        <span class="line"><span class="line__inner" data-i18n="hero.title1">Every app</span></span>
+        <span class="line"><span class="line__inner" data-i18n="hero.title2">deserves</span></span>
+        <span class="line"><span class="line__inner line__inner--accent" data-i18n="hero.title3">a premiere.</span></span>
+      </h1>
+      <p class="hero__lead reveal" data-i18n="hero.lead">ZARKOR puts your app under the spotlight: a cinematic 3D showcase in ten languages, where every sponsored listing is clearly labeled and every visitor is respected.</p>
+      <div class="hero__actions reveal">
+        <a class="btn btn--primary btn--lg" href="submit.html">
+          <span data-i18n="hero.cta1">Premiere your app</span>
+          <svg class="btn__icon" width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg>
+        </a>
+        <a class="btn btn--ghost btn--lg" href="#showing"><span data-i18n="hero.cta2">See what&#39;s showing</span></a>
+      </div>
+      <p class="hero__note reveal" data-i18n="hero.note">Monthly plans · Cancel anytime · No visitor tracking</p>
+      <button type="button" class="headliner reveal" id="headliner" hidden>
+        <svg class="headliner__star" width="14" height="14" aria-hidden="true" focusable="false"><use href="#i-star"/></svg>
+        <span class="headliner__label" data-i18n="hero.headliner">Tonight&#39;s headliner</span>
+        <span class="headliner__name" id="headliner-name" translate="no"></span>
+      </button>
+    </div>
+    <a class="scroll-cue" href="#crowd">
+      <span data-i18n="hero.scroll">Scroll to roll the film</span>
+      <svg width="16" height="16" aria-hidden="true" focusable="false"><use href="#i-down"/></svg>
+    </a>
+  </section>
+
+  <!-- ===================== ACT I — THE CROWD ===================== -->
+  <section class="act act--crowd" id="crowd" data-shot="crowd" aria-labelledby="crowd-title">
+    <div class="shell act__inner">
+      <div class="act__copy">
+        <p class="eyebrow reveal" data-i18n="crowd.eyebrow">Act I — The crowd</p>
+        <h2 class="act__title reveal" id="crowd-title" data-i18n="crowd.title">Millions of apps. Seconds of attention.</h2>
+        <p class="act__text reveal" data-i18n="crowd.p1">App stores are crowded rooms where everyone talks at once. A store listing is not a launch. It is a seat in the back row.</p>
+        <p class="act__text act__text--strong reveal" data-i18n="crowd.p2">A premiere is different. One stage. One spotlight. Your app, presented the way it deserves to be seen.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ACT II — THE PRODUCTION ===================== -->
+  <section class="act act--production" id="production" aria-labelledby="production-title">
+    <div class="pin" id="production-pin">
+      <div class="pin__sticky">
+        <div class="shell pin__inner">
+          <header class="pin__head">
+            <p class="eyebrow" data-i18n="production.eyebrow">Act II — The production</p>
+            <h2 class="act__title" id="production-title" data-i18n="production.title">How your premiere is made</h2>
+          </header>
+          <ol class="steps" id="steps">
+            <li class="step is-active" data-step="0">
+              <span class="step__no" aria-hidden="true">01</span>
+              <h3 class="step__title" data-i18n="production.s1.title">Submit your app</h3>
+              <p class="step__text" data-i18n="production.s1.text">Tell us about your app and choose a ticket. It takes a few minutes and needs no technical skills.</p>
+            </li>
+            <li class="step" data-step="1">
+              <span class="step__no" aria-hidden="true">02</span>
+              <h3 class="step__title" data-i18n="production.s2.title">We review it</h3>
+              <p class="step__text" data-i18n="production.s2.text">A person checks every submission against our content guidelines. Apps that mislead or harm people do not get a stage.</p>
+            </li>
+            <li class="step" data-step="2">
+              <span class="step__no" aria-hidden="true">03</span>
+              <h3 class="step__title" data-i18n="production.s3.title">Your poster goes up</h3>
+              <p class="step__text" data-i18n="production.s3.text">We build your listing: a cinematic poster, your tagline, and direct links to your store pages.</p>
+            </li>
+            <li class="step" data-step="3">
+              <span class="step__no" aria-hidden="true">04</span>
+              <h3 class="step__title" data-i18n="production.s4.title">Showtime, every month</h3>
+              <p class="step__text" data-i18n="production.s4.text">Your app stays on screen for as long as your plan is active. Change plans or cancel whenever you like.</p>
+            </li>
+          </ol>
+          <div class="pin__dots" id="pin-dots" aria-hidden="true">
+            <span class="pin__dot is-active"></span><span class="pin__dot"></span><span class="pin__dot"></span><span class="pin__dot"></span>
+          </div>
+        </div>
+      </div>
+      <div class="pin__marks" aria-hidden="true">
+        <span class="pin__mark pin__mark--1" data-shot="prod1"></span>
+        <span class="pin__mark pin__mark--2" data-shot="prod2"></span>
+        <span class="pin__mark pin__mark--3" data-shot="prod3"></span>
+        <span class="pin__mark pin__mark--4" data-shot="prod4"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ACT III — NOW SHOWING ===================== -->
+  <section class="act act--showing" id="showing" data-shot="showing" aria-labelledby="showing-title">
+    <div class="shell">
+      <header class="section-head">
+        <p class="eyebrow reveal" data-i18n="showing.eyebrow">Act III — The programme</p>
+        <div class="marquee reveal">
+          <span class="marquee__bulbs marquee__bulbs--top" aria-hidden="true"></span>
+          <h2 class="marquee__title" id="showing-title" data-i18n="showing.title">Now showing</h2>
+          <span class="marquee__bulbs marquee__bulbs--bottom" aria-hidden="true"></span>
+        </div>
+        <p class="section-head__lead reveal" data-i18n="showing.lead">Browse the apps on stage right now. Every listing here is a paid placement, and we say so on every poster.</p>
+      </header>
+      <div class="filters reveal" id="filters" role="group" data-i18n-attr="aria-label:a11y.filters" aria-label="Filter apps by category"></div>
+    </div>
+
+    <div class="strip-wrap">
+      <ul class="strip" id="strip" data-i18n-attr="aria-label:a11y.programme" aria-label="Apps now showing"></ul>
+      <p class="strip__status" id="strip-status" role="status" data-i18n="showing.loading">Loading the programme…</p>
+      <noscript><p class="strip__status strip__status--static" data-i18n="showing.noscript">Please enable JavaScript to browse the programme.</p></noscript>
+    </div>
+
+    <div class="shell strip-foot">
+      <p class="fineprint" id="example-note" hidden data-i18n="showing.exampleNote">Example listings are shown for illustration only. Their names and details are fictitious, and any resemblance to real products is coincidental.</p>
+      <div class="strip__nav">
+        <button type="button" class="icon-btn icon-btn--lg" id="strip-prev" data-i18n-attr="aria-label:a11y.prev" aria-label="Previous">
+          <svg class="flip-x" width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-chevron"/></svg>
+        </button>
+        <button type="button" class="icon-btn icon-btn--lg" id="strip-next" data-i18n-attr="aria-label:a11y.next" aria-label="Next">
+          <svg width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-chevron"/></svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== HOUSE RULES ===================== -->
+  <section class="act act--honest" id="honest" data-shot="honest" aria-labelledby="honest-title">
+    <div class="shell">
+      <header class="section-head">
+        <p class="eyebrow reveal" data-i18n="honest.eyebrow">Our house rules</p>
+        <h2 class="act__title reveal" id="honest-title" data-i18n="honest.title">Honest by design</h2>
+      </header>
+      <ul class="rules">
+        <li class="rule reveal">
+          <svg class="rule__icon" width="28" height="28" aria-hidden="true" focusable="false"><use href="#i-label"/></svg>
+          <h3 class="rule__title" data-i18n="honest.i1.title">Ads look like ads</h3>
+          <p class="rule__text" data-i18n="honest.i1.text">Every paid placement carries a visible “Sponsored” label. No disguised advertising, ever.</p>
+        </li>
+        <li class="rule reveal">
+          <svg class="rule__icon" width="28" height="28" aria-hidden="true" focusable="false"><use href="#i-eye"/></svg>
+          <h3 class="rule__title" data-i18n="honest.i2.title">No visitor tracking</h3>
+          <p class="rule__text" data-i18n="honest.i2.text">No advertising cookies, no profiling, no data sales. The site stores only your language and privacy choices, on your own device.</p>
+        </li>
+        <li class="rule reveal">
+          <svg class="rule__icon" width="28" height="28" aria-hidden="true" focusable="false"><use href="#i-shield"/></svg>
+          <h3 class="rule__title" data-i18n="honest.i3.title">Every app is reviewed</h3>
+          <p class="rule__text" data-i18n="honest.i3.text">We check submissions by hand and remove listings that break our guidelines.</p>
+        </li>
+        <li class="rule reveal">
+          <svg class="rule__icon" width="28" height="28" aria-hidden="true" focusable="false"><use href="#i-loop"/></svg>
+          <h3 class="rule__title" data-i18n="honest.i4.title">No lock-in</h3>
+          <p class="rule__text" data-i18n="honest.i4.text">Plans renew monthly. Cancel anytime and your listing stays up until the end of the period you paid for.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===================== ACT IV — TICKETS ===================== -->
+  <section class="act act--tickets" id="tickets" data-shot="tickets" aria-labelledby="tickets-title">
+    <div class="shell">
+      <header class="section-head">
+        <p class="eyebrow reveal" data-i18n="tickets.eyebrow">Act IV — The box office</p>
+        <h2 class="act__title reveal" id="tickets-title" data-i18n="tickets.title">Choose your ticket</h2>
+        <p class="section-head__lead reveal" data-i18n="tickets.lead">Simple monthly plans. No setup fees, no long contracts.</p>
+      </header>
+
+      <ul class="tickets">
+        <li class="ticket reveal" data-plan="screening">
+          <article class="ticket__body" aria-labelledby="plan-screening-name">
+            <p class="ticket__pick" data-i18n="tickets.pick">Director&#39;s pick</p>
+            <p class="ticket__admit" data-i18n="tickets.admit">Admit one app</p>
+            <h3 class="ticket__name" id="plan-screening-name" data-i18n="tickets.screening.name">Screening</h3>
+            <p class="ticket__desc" data-i18n="tickets.screening.desc">A seat on stage for a new or growing app.</p>
+            <p class="ticket__price">
+              <span class="ticket__amount" data-plan-price="screening">$19</span>
+              <span class="ticket__per" data-i18n="tickets.perMonth">per month</span>
+            </p>
+            <ul class="ticket__features">
+              <li><svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-check"/></svg><span data-i18n="tickets.screening.f1">Poster listing in Now Showing</span></li>
+              <li><svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-check"/></svg><span data-i18n="tickets.screening.f2">Your tagline and category</span></li>
+              <li><svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-check"/></svg><span data-i18n="tickets.screening.f3">One link to your store page or website</span></li>
+              <li><svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-check"/></svg><span data-i18n="tickets.screening.f4">Visible “Sponsored” label</span></li>
+            </ul>
+            <a class="btn btn--outline ticket__cta" href="submit.html?plan=screening" aria-labelledby="plan-screening-cta plan-screening-name">
+              <span id="plan-screening-cta" data-i18n="tickets.cta">Get this ticket</span>
+            </a>
+          </article>
+          <div class="ticket__stub" aria-hidden="true">
+            <span class="ticket__barcode"></span>
+            <span class="ticket__serial">№ 001</span>
+          </div>
+        </li>
+
+        <li class="ticket reveal is-featured" data-plan="premiere">
+          <article class="ticket__body" aria-labelledby="plan-premiere-name">
+            <p class="ticket__pick" data-i18n="tickets.pick">Director&#39;s pick</p>
+            <p class="ticket__admit" data-i18n="tickets.admit">Admit one app</p>
+            <h3 class="ticket__name" id="plan-premiere-name" data-i18n="tickets.premiere.name">Premiere</h3>
+            <p class="ticket__desc" data-i18n="tickets.premiere.desc">Priority placement and a richer listing.</p>
+            <p class="ticket__price">
+              <span class="ticket__amount" data-plan-price="premiere">$49</span>
+              <span class="ticket__per" data-i18n="tickets.perMonth">per month</span>
+            </p>
+            <ul class="ticket__features">
+              <li><svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-check"/></svg><span data-i18n="tickets.premiere.f1">Everything in Screening</span></li>
+              <li><svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-check"/></svg><span data-i18n="tickets.premiere.f2">Placement ahead of Screening listings</span></li>
+              <li><svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-check"/></svg><span data-i18n="tickets.premiere.f3">Extended description in your details view</span></li>
+              <li><svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-check"/></svg><span data-i18n="tickets.premiere.f4">Up to three links: App Store, Google Play and website</span></li>
+            </ul>
+            <a class="btn btn--primary ticket__cta" href="submit.html?plan=premiere" aria-labelledby="plan-premiere-cta plan-premiere-name">
+              <span id="plan-premiere-cta" data-i18n="tickets.cta">Get this ticket</span>
+            </a>
+          </article>
+          <div class="ticket__stub" aria-hidden="true">
+            <span class="ticket__barcode"></span>
+            <span class="ticket__serial">№ 002</span>
+          </div>
+        </li>
+
+        <li class="ticket reveal" data-plan="blockbuster">
+          <article class="ticket__body" aria-labelledby="plan-blockbuster-name">
+            <p class="ticket__pick" data-i18n="tickets.pick">Director&#39;s pick</p>
+            <p class="ticket__admit" data-i18n="tickets.admit">Admit one app</p>
+            <h3 class="ticket__name" id="plan-blockbuster-name" data-i18n="tickets.blockbuster.name">Blockbuster</h3>
+            <p class="ticket__desc" data-i18n="tickets.blockbuster.desc">Top billing for apps that want the front row.</p>
+            <p class="ticket__price">
+              <span class="ticket__amount" data-plan-price="blockbuster">$149</span>
+              <span class="ticket__per" data-i18n="tickets.perMonth">per month</span>
+            </p>
+            <ul class="ticket__features">
+              <li><svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-check"/></svg><span data-i18n="tickets.blockbuster.f1">Everything in Premiere</span></li>
+              <li><svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-check"/></svg><span data-i18n="tickets.blockbuster.f2">First positions in Now Showing</span></li>
+              <li><svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-check"/></svg><span data-i18n="tickets.blockbuster.f3">Rotation in the “Tonight&#39;s headliner” spot on the home page</span></li>
+              <li><svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-check"/></svg><span data-i18n="tickets.blockbuster.f4">Highlighted headliner poster</span></li>
+            </ul>
+            <a class="btn btn--outline ticket__cta" href="submit.html?plan=blockbuster" aria-labelledby="plan-blockbuster-cta plan-blockbuster-name">
+              <span id="plan-blockbuster-cta" data-i18n="tickets.cta">Get this ticket</span>
+            </a>
+          </article>
+          <div class="ticket__stub" aria-hidden="true">
+            <span class="ticket__barcode"></span>
+            <span class="ticket__serial">№ 003</span>
+          </div>
+        </li>
+      </ul>
+
+      <p class="fineprint fineprint--center" data-i18n="tickets.taxNote">Prices are in USD. Taxes may be added at checkout depending on your location. All listings are subject to review and to our content guidelines. We do not guarantee downloads, installs or revenue.</p>
+    </div>
+  </section>
+
+  <!-- ===================== QUESTIONS ===================== -->
+  <section class="act act--faq" id="faq" data-shot="faq" aria-labelledby="faq-title">
+    <div class="shell shell--narrow">
+      <header class="section-head">
+        <p class="eyebrow reveal" data-i18n="faq.eyebrow">Questions</p>
+        <h2 class="act__title reveal" id="faq-title" data-i18n="faq.title">Before the lights go down</h2>
+      </header>
+      <div class="faq">
+        <details class="faq__item reveal">
+          <summary class="faq__q"><span data-i18n="faq.q1">What is ZARKOR?</span><svg class="faq__icon" width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-plus"/></svg></summary>
+          <div class="faq__a"><p data-i18n="faq.a1">ZARKOR is an online showcase where app publishers pay a monthly fee to present their apps to visitors. Think of it as a small cinema for apps: a curated programme, presented with care.</p></div>
+        </details>
+        <details class="faq__item reveal">
+          <summary class="faq__q"><span data-i18n="faq.q2">How do I get my app listed?</span><svg class="faq__icon" width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-plus"/></svg></summary>
+          <div class="faq__a"><p data-i18n="faq.a2">Choose a ticket, fill in the short submission form and we will review your app. Once it is approved and payment is completed, your poster goes live.</p></div>
+        </details>
+        <details class="faq__item reveal">
+          <summary class="faq__q"><span data-i18n="faq.q3">How does billing work?</span><svg class="faq__icon" width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-plus"/></svg></summary>
+          <div class="faq__a"><p data-i18n="faq.a3">Plans are billed monthly in advance through a secure third-party payment provider. We never see or store your card details.</p></div>
+        </details>
+        <details class="faq__item reveal">
+          <summary class="faq__q"><span data-i18n="faq.q4">Can I cancel?</span><svg class="faq__icon" width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-plus"/></svg></summary>
+          <div class="faq__a"><p data-i18n="faq.a4">Yes, at any time. Your listing stays online until the end of the period you have already paid for, and you will not be charged again.</p></div>
+        </details>
+        <details class="faq__item reveal">
+          <summary class="faq__q"><span data-i18n="faq.q5">Do you offer refunds?</span><svg class="faq__icon" width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-plus"/></svg></summary>
+          <div class="faq__a"><p data-i18n="faq.a5">Our Refund Policy explains when refunds apply, including the withdrawal rights that consumers have in some countries. It is linked at the bottom of every page.</p></div>
+        </details>
+        <details class="faq__item reveal">
+          <summary class="faq__q"><span data-i18n="faq.q6">Which apps do you accept?</span><svg class="faq__icon" width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-plus"/></svg></summary>
+          <div class="faq__a"><p data-i18n="faq.a6">Lawful apps that are available to the public and follow our Content Guidelines. We do not list apps that are deceptive, malicious, hateful or sexually explicit, or that target children unlawfully. We may decline or remove a listing at our discretion.</p></div>
+        </details>
+        <details class="faq__item reveal">
+          <summary class="faq__q"><span data-i18n="faq.q7">Do you guarantee downloads?</span><svg class="faq__icon" width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-plus"/></svg></summary>
+          <div class="faq__a"><p data-i18n="faq.a7">No, and you should be careful with anyone who does. We sell visibility on our stage, not results. How many people install your app depends on the app, the audience and many things outside our control.</p></div>
+        </details>
+        <details class="faq__item reveal">
+          <summary class="faq__q"><span data-i18n="faq.q8">Are listings marked as advertising?</span><svg class="faq__icon" width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-plus"/></svg></summary>
+          <div class="faq__a"><p data-i18n="faq.a8">Always. Every paid placement shows a “Sponsored” label so visitors know exactly what they are looking at.</p></div>
+        </details>
+        <details class="faq__item reveal">
+          <summary class="faq__q"><span data-i18n="faq.q9">Do you track visitors?</span><svg class="faq__icon" width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-plus"/></svg></summary>
+          <div class="faq__a"><p data-i18n="faq.a9">No. We do not use advertising or profiling cookies. The site remembers only your language, motion and privacy choices, and it keeps them on your own device.</p></div>
+        </details>
+        <details class="faq__item reveal">
+          <summary class="faq__q"><span data-i18n="faq.q10">Which languages are supported?</span><svg class="faq__icon" width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-plus"/></svg></summary>
+          <div class="faq__a"><p data-i18n="faq.a10">The site is available in English, Hebrew, Arabic, Spanish, French, German, Portuguese, Russian, Chinese and Japanese. You can provide your listing text in any of them.</p></div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FINAL ACT ===================== -->
+  <section class="finale" id="finale" data-shot="finale" aria-labelledby="finale-title">
+    <div class="shell finale__inner">
+      <p class="eyebrow reveal" data-i18n="finale.eyebrow">Final act</p>
+      <h2 class="finale__title" id="finale-title">
+        <span class="line"><span class="line__inner" data-i18n="finale.title1">Your app.</span></span>
+        <span class="line"><span class="line__inner line__inner--accent" data-i18n="finale.title2">Top billing.</span></span>
+      </h2>
+      <p class="finale__lead reveal" data-i18n="finale.lead">The stage is set and the projector is warm. All that is missing is your app.</p>
+      <a class="btn btn--primary btn--xl reveal" href="submit.html">
+        <span data-i18n="finale.cta">Premiere your app</span>
+        <svg class="btn__icon" width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg>
+      </a>
+      <dl class="credits reveal">
+        <div class="credits__row"><dt data-i18n="finale.starring">Starring</dt><dd data-i18n="finale.starringValue">Your app</dd></div>
+        <div class="credits__row"><dt data-i18n="finale.directed">Directed by</dt><dd data-i18n="finale.directedValue">You</dd></div>
+        <div class="credits__row"><dt data-i18n="finale.presented">Presented by</dt><dd data-i18n="finale.presentedValue">ZARKOR</dd></div>
+      </dl>
+    </div>
+  </section>
+</main>
+
+<!-- App details -->
+<dialog class="dialog dialog--app" id="app-dialog" aria-labelledby="app-dialog-title">
+  <div class="dialog__panel">
+    <button type="button" class="icon-btn dialog__close" id="app-dialog-close" data-i18n-attr="aria-label:a11y.close" aria-label="Close">
+      <svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-close"/></svg>
+    </button>
+    <div class="app-detail">
+      <div class="app-detail__poster" id="app-dialog-poster" aria-hidden="true"></div>
+      <div class="app-detail__body">
+        <p class="badges" id="app-dialog-badges"></p>
+        <h2 class="dialog__title" id="app-dialog-title" translate="no"></h2>
+        <p class="app-detail__tagline" id="app-dialog-tagline"></p>
+        <dl class="app-detail__meta">
+          <div><dt data-i18n="app.category">Category</dt><dd id="app-dialog-category"></dd></div>
+        </dl>
+        <div class="app-detail__about" id="app-dialog-about">
+          <h3 class="app-detail__heading" data-i18n="app.about">About this app</h3>
+          <p id="app-dialog-description"></p>
+        </div>
+        <div class="app-detail__get" id="app-dialog-get">
+          <h3 class="app-detail__heading" data-i18n="app.getIt">Get the app</h3>
+          <div class="app-detail__links" id="app-dialog-links"></div>
+          <p class="fineprint" data-i18n="app.externalNote">Store links take you to websites operated by third parties.</p>
+        </div>
+        <p class="fineprint app-detail__note" id="app-dialog-note"></p>
+        <a class="dialog__link" href="guidelines.html#report" data-i18n="app.report">Report this listing</a>
+      </div>
+    </div>
+  </div>
+</dialog>
+<footer class="site-footer" id="site-footer">
+  <div class="shell site-footer__grid">
+    <div class="site-footer__brand">
+      <a class="brand" href="index.html" data-i18n-attr="aria-label:a11y.home" aria-label="ZARKOR — home">
+        <svg class="brand__mark" width="28" height="28" aria-hidden="true" focusable="false"><use href="#i-mark"/></svg>
+        <span class="brand__name" translate="no">ZARKOR</span>
+      </a>
+      <p class="site-footer__blurb" data-i18n="footer.blurb">A cinematic stage for apps.</p>
+      <p class="site-footer__disclosure">
+        <svg width="16" height="16" aria-hidden="true" focusable="false"><use href="#i-label"/></svg>
+        <span data-i18n="footer.adDisclosure">Listings on this site are paid advertisements.</span>
+      </p>
+    </div>
+
+    <nav class="site-footer__nav" data-i18n-attr="aria-label:a11y.footerNav" aria-label="Footer navigation">
+      <div class="site-footer__col">
+        <h2 class="site-footer__heading" data-i18n="footer.site">Site</h2>
+        <ul>
+          <li><a href="index.html#showing" data-i18n="nav.showing">Now Showing</a></li>
+          <li><a href="index.html#production" data-i18n="nav.how">How it works</a></li>
+          <li><a href="index.html#tickets" data-i18n="nav.tickets">Tickets</a></li>
+          <li><a href="index.html#faq" data-i18n="nav.faq">FAQ</a></li>
+          <li><a href="submit.html" data-i18n="footer.submit">Submit your app</a></li>
+        </ul>
+      </div>
+      <div class="site-footer__col">
+        <h2 class="site-footer__heading" data-i18n="footer.legal">Legal</h2>
+        <ul>
+          <li><a href="terms.html" data-i18n="footer.terms">Terms of Service</a></li>
+          <li><a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a></li>
+          <li><a href="cookies.html" data-i18n="footer.cookies">Cookie Policy</a></li>
+          <li><a href="refunds.html" data-i18n="footer.refunds">Refund Policy</a></li>
+          <li><a href="guidelines.html" data-i18n="footer.guidelines">Content Guidelines</a></li>
+          <li><a href="accessibility.html" data-i18n="footer.accessibility">Accessibility</a></li>
+          <li><a href="legal.html" data-i18n="footer.notice">Legal Notice</a></li>
+        </ul>
+      </div>
+      <div class="site-footer__col">
+        <h2 class="site-footer__heading" data-i18n="footer.preferences">Preferences</h2>
+        <ul>
+          <li>
+            <button type="button" class="link-btn js-consent-open">
+              <svg width="16" height="16" aria-hidden="true" focusable="false"><use href="#i-shield"/></svg>
+              <span data-i18n="footer.privacySettings">Privacy settings</span>
+            </button>
+          </li>
+          <li>
+            <button type="button" class="link-btn js-motion-toggle" aria-pressed="false">
+              <svg class="icon-btn__pause" width="16" height="16" aria-hidden="true" focusable="false"><use href="#i-pause"/></svg>
+              <svg class="icon-btn__play" width="16" height="16" aria-hidden="true" focusable="false"><use href="#i-play"/></svg>
+              <span data-i18n="a11y.motionPause">Pause animations</span>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+  <div class="shell site-footer__legal">
+    <p class="site-footer__trademarks" data-i18n="footer.trademarks">Apple and App Store are trademarks of Apple Inc. Google Play is a trademark of Google LLC. All other names and marks belong to their respective owners. ZARKOR is an independent service and is not affiliated with, sponsored by or endorsed by Apple, Google or any listed publisher.</p>
+    <p class="site-footer__rights" data-i18n="footer.rights">© 2026 ZARKOR. All rights reserved.</p>
+  </div>
+</footer>
+
+<section class="consent" id="consent-banner" hidden aria-labelledby="consent-banner-title">
+  <div class="consent__inner">
+    <div class="consent__copy">
+      <h2 class="consent__title" id="consent-banner-title" data-i18n="consent.title">Your privacy</h2>
+      <p class="consent__text" id="consent-banner-text" data-i18n="consent.textBasic">This site uses only the storage it strictly needs to work: your language, motion and privacy choices, kept on your own device. No advertising cookies. No tracking.</p>
+      <p class="consent__gpc" id="consent-banner-gpc" hidden data-i18n="consent.gpc">Your browser sent a Global Privacy Control signal. We honour it: optional storage stays off.</p>
+    </div>
+    <div class="consent__actions">
+      <button type="button" class="btn btn--ghost btn--sm" id="consent-settings" data-i18n="consent.settings">Settings</button>
+      <button type="button" class="btn btn--outline btn--sm" id="consent-reject" hidden data-i18n="consent.reject">Reject optional</button>
+      <button type="button" class="btn btn--outline btn--sm" id="consent-accept" hidden data-i18n="consent.accept">Accept all</button>
+      <button type="button" class="btn btn--outline btn--sm" id="consent-ok" data-i18n="consent.ok">Got it</button>
+    </div>
+  </div>
+</section>
+
+<dialog class="dialog dialog--consent" id="consent-dialog" aria-labelledby="consent-dialog-title">
+  <form method="dialog" class="dialog__panel" id="consent-form">
+    <header class="dialog__head">
+      <h2 class="dialog__title" id="consent-dialog-title" data-i18n="consent.dialogTitle">Privacy settings</h2>
+      <button type="button" class="icon-btn dialog__close" id="consent-close" data-i18n-attr="aria-label:a11y.close" aria-label="Close">
+        <svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-close"/></svg>
+      </button>
+    </header>
+    <p class="dialog__intro" data-i18n="consent.dialogIntro">Choose what this site may store on your device. Your choice is saved on this device only.</p>
+    <p class="consent__gpc" id="consent-dialog-gpc" hidden data-i18n="consent.gpc">Your browser sent a Global Privacy Control signal. We honour it: optional storage stays off.</p>
+
+    <div class="choice">
+      <div class="choice__copy">
+        <h3 class="choice__title" data-i18n="consent.necessaryTitle">Essential</h3>
+        <p class="choice__text" data-i18n="consent.necessaryText">Remembers your language, your motion preference and your privacy choices. Always on, because the site cannot work properly without it.</p>
+      </div>
+      <p class="choice__state" data-i18n="consent.always">Always on</p>
+    </div>
+
+    <div class="choice">
+      <div class="choice__copy">
+        <h3 class="choice__title" id="consent-analytics-title" data-i18n="consent.analyticsTitle">Analytics</h3>
+        <p class="choice__text" id="consent-analytics-text" data-i18n="consent.analyticsText">Anonymous, aggregated statistics that help us improve the site. Off unless you turn it on.</p>
+        <p class="choice__text choice__text--muted" id="consent-analytics-none" hidden data-i18n="consent.analyticsNone">Not in use on this site at the moment.</p>
+      </div>
+      <label class="switch">
+        <input type="checkbox" id="consent-analytics" aria-labelledby="consent-analytics-title" aria-describedby="consent-analytics-text">
+        <span class="switch__track" aria-hidden="true"><span class="switch__thumb"></span></span>
+      </label>
+    </div>
+
+    <footer class="dialog__foot">
+      <a class="dialog__link" href="cookies.html" data-i18n="consent.policy">Cookie Policy</a>
+      <button type="submit" class="btn btn--primary btn--sm" id="consent-save" data-i18n="consent.save">Save choices</button>
+    </footer>
+  </form>
+</dialog>
+
+<div class="sr-only" id="live-region" role="status" aria-live="polite"></div>
+
+<div class="fx fx--grain" aria-hidden="true"></div>
+</body>
+</html>
