@@ -1,0 +1,55 @@
+<section class="consent" id="consent-banner" hidden aria-labelledby="consent-banner-title">
+  <div class="consent__inner">
+    <div class="consent__copy">
+      <h2 class="consent__title" id="consent-banner-title" data-i18n="consent.title"></h2>
+      <p class="consent__text" id="consent-banner-text" data-i18n="consent.textBasic"></p>
+      <p class="consent__gpc" id="consent-banner-gpc" hidden data-i18n="consent.gpc"></p>
+    </div>
+    <div class="consent__actions">
+      <button type="button" class="btn btn--ghost btn--sm" id="consent-settings" data-i18n="consent.settings"></button>
+      <button type="button" class="btn btn--outline btn--sm" id="consent-reject" hidden data-i18n="consent.reject"></button>
+      <button type="button" class="btn btn--outline btn--sm" id="consent-accept" hidden data-i18n="consent.accept"></button>
+      <button type="button" class="btn btn--outline btn--sm" id="consent-ok" data-i18n="consent.ok"></button>
+    </div>
+  </div>
+</section>
+
+<dialog class="dialog dialog--consent" id="consent-dialog" aria-labelledby="consent-dialog-title">
+  <form method="dialog" class="dialog__panel" id="consent-form">
+    <header class="dialog__head">
+      <h2 class="dialog__title" id="consent-dialog-title" data-i18n="consent.dialogTitle"></h2>
+      <button type="button" class="icon-btn dialog__close" id="consent-close" data-i18n-attr="aria-label:a11y.close">
+        <svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-close"/></svg>
+      </button>
+    </header>
+    <p class="dialog__intro" data-i18n="consent.dialogIntro"></p>
+    <p class="consent__gpc" id="consent-dialog-gpc" hidden data-i18n="consent.gpc"></p>
+
+    <div class="choice">
+      <div class="choice__copy">
+        <h3 class="choice__title" data-i18n="consent.necessaryTitle"></h3>
+        <p class="choice__text" data-i18n="consent.necessaryText"></p>
+      </div>
+      <p class="choice__state" data-i18n="consent.always"></p>
+    </div>
+
+    <div class="choice">
+      <div class="choice__copy">
+        <h3 class="choice__title" id="consent-analytics-title" data-i18n="consent.analyticsTitle"></h3>
+        <p class="choice__text" id="consent-analytics-text" data-i18n="consent.analyticsText"></p>
+        <p class="choice__text choice__text--muted" id="consent-analytics-none" hidden data-i18n="consent.analyticsNone"></p>
+      </div>
+      <label class="switch">
+        <input type="checkbox" id="consent-analytics" aria-labelledby="consent-analytics-title" aria-describedby="consent-analytics-text">
+        <span class="switch__track" aria-hidden="true"><span class="switch__thumb"></span></span>
+      </label>
+    </div>
+
+    <footer class="dialog__foot">
+      <a class="dialog__link" href="cookies.html" data-i18n="consent.policy"></a>
+      <button type="submit" class="btn btn--primary btn--sm" id="consent-save" data-i18n="consent.save"></button>
+    </footer>
+  </form>
+</dialog>
+
+<div class="sr-only" id="live-region" role="status" aria-live="polite"></div>

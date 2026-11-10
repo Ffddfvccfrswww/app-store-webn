@@ -1,0 +1,393 @@
+<!--page
+{
+  "file": "index.html",
+  "page": "home",
+  "bodyClass": "page-home",
+  "titleKey": "meta.home.title",
+  "descKey": "meta.home.desc",
+  "css": ["home"]
+}
+-->
+<div class="stage" aria-hidden="true">
+  <div class="stage__fallback"></div>
+  <canvas class="stage__canvas" id="stage-canvas"></canvas>
+  <div class="stage__dim" id="stage-dim"></div>
+</div>
+<div class="fx fx--vignette" aria-hidden="true"></div>
+<div class="fx fx--spot" id="fx-spot" aria-hidden="true"></div>
+<div class="fx fx--bars" aria-hidden="true"><span class="fx__bar fx__bar--top"></span><span class="fx__bar fx__bar--bottom"></span></div>
+
+<div class="hud" aria-hidden="true">
+  <span class="hud__rec"></span>
+  <span class="hud__tc" id="hud-tc">00:00:00:00</span>
+  <span class="hud__sep"></span>
+  <span class="hud__scene"><span data-i18n="hud.scene"></span> <span id="hud-scene">01</span> / <span id="hud-total">07</span></span>
+</div>
+<div class="rail" aria-hidden="true"><span class="rail__fill" id="rail-fill"></span></div>
+
+<div class="leader" id="leader" aria-hidden="true">
+  <div class="leader__frame">
+    <svg class="leader__dial" viewBox="0 0 200 200" focusable="false">
+      <circle cx="100" cy="100" r="92" fill="none" stroke="currentColor" stroke-width="2"/>
+      <circle cx="100" cy="100" r="74" fill="none" stroke="currentColor" stroke-width="1" opacity=".5"/>
+      <path d="M100 0v200M0 100h200" stroke="currentColor" stroke-width="1" opacity=".5"/>
+    </svg>
+    <span class="leader__sweep"></span>
+    <span class="leader__count leader__count--3">3</span>
+    <span class="leader__count leader__count--2">2</span>
+    <span class="leader__count leader__count--1">1</span>
+  </div>
+</div>
+
+<main id="main" class="home" tabindex="-1">
+
+  <!-- ===================== OPENING SHOT ===================== -->
+  <section class="hero" id="top" data-shot="hero" aria-labelledby="hero-title">
+    <div class="shell hero__inner">
+      <p class="eyebrow reveal"><span class="eyebrow__dot" aria-hidden="true"></span><span data-i18n="hero.eyebrow"></span></p>
+      <h1 class="hero__title" id="hero-title">
+        <span class="line"><span class="line__inner" data-i18n="hero.title1"></span></span>
+        <span class="line"><span class="line__inner" data-i18n="hero.title2"></span></span>
+        <span class="line"><span class="line__inner line__inner--accent" data-i18n="hero.title3"></span></span>
+      </h1>
+      <p class="hero__lead reveal" data-i18n="hero.lead"></p>
+      <div class="hero__actions reveal">
+        <a class="btn btn--primary btn--lg" href="submit.html">
+          <span data-i18n="hero.cta1"></span>
+          <svg class="btn__icon" width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg>
+        </a>
+        <a class="btn btn--ghost btn--lg" href="#showing"><span data-i18n="hero.cta2"></span></a>
+      </div>
+      <p class="hero__note reveal" data-i18n="hero.note"></p>
+      <button type="button" class="headliner reveal" id="headliner" hidden>
+        <svg class="headliner__star" width="14" height="14" aria-hidden="true" focusable="false"><use href="#i-star"/></svg>
+        <span class="headliner__label" data-i18n="hero.headliner"></span>
+        <span class="headliner__name" id="headliner-name" translate="no"></span>
+      </button>
+    </div>
+    <a class="scroll-cue" href="#crowd">
+      <span data-i18n="hero.scroll"></span>
+      <svg width="16" height="16" aria-hidden="true" focusable="false"><use href="#i-down"/></svg>
+    </a>
+  </section>
+
+  <!-- ===================== ACT I — THE CROWD ===================== -->
+  <section class="act act--crowd" id="crowd" data-shot="crowd" aria-labelledby="crowd-title">
+    <div class="shell act__inner">
+      <div class="act__copy">
+        <p class="eyebrow reveal" data-i18n="crowd.eyebrow"></p>
+        <h2 class="act__title reveal" id="crowd-title" data-i18n="crowd.title"></h2>
+        <p class="act__text reveal" data-i18n="crowd.p1"></p>
+        <p class="act__text act__text--strong reveal" data-i18n="crowd.p2"></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ACT II — THE PRODUCTION ===================== -->
+  <section class="act act--production" id="production" aria-labelledby="production-title">
+    <div class="pin" id="production-pin">
+      <div class="pin__sticky">
+        <div class="shell pin__inner">
+          <header class="pin__head">
+            <p class="eyebrow" data-i18n="production.eyebrow"></p>
+            <h2 class="act__title" id="production-title" data-i18n="production.title"></h2>
+          </header>
+          <ol class="steps" id="steps">
+            <li class="step is-active" data-step="0">
+              <span class="step__no" aria-hidden="true">01</span>
+              <h3 class="step__title" data-i18n="production.s1.title"></h3>
+              <p class="step__text" data-i18n="production.s1.text"></p>
+            </li>
+            <li class="step" data-step="1">
+              <span class="step__no" aria-hidden="true">02</span>
+              <h3 class="step__title" data-i18n="production.s2.title"></h3>
+              <p class="step__text" data-i18n="production.s2.text"></p>
+            </li>
+            <li class="step" data-step="2">
+              <span class="step__no" aria-hidden="true">03</span>
+              <h3 class="step__title" data-i18n="production.s3.title"></h3>
+              <p class="step__text" data-i18n="production.s3.text"></p>
+            </li>
+            <li class="step" data-step="3">
+              <span class="step__no" aria-hidden="true">04</span>
+              <h3 class="step__title" data-i18n="production.s4.title"></h3>
+              <p class="step__text" data-i18n="production.s4.text"></p>
+            </li>
+          </ol>
+          <div class="pin__dots" id="pin-dots" aria-hidden="true">
+            <span class="pin__dot is-active"></span><span class="pin__dot"></span><span class="pin__dot"></span><span class="pin__dot"></span>
+          </div>
+        </div>
+      </div>
+      <div class="pin__marks" aria-hidden="true">
+        <span class="pin__mark pin__mark--1" data-shot="prod1"></span>
+        <span class="pin__mark pin__mark--2" data-shot="prod2"></span>
+        <span class="pin__mark pin__mark--3" data-shot="prod3"></span>
+        <span class="pin__mark pin__mark--4" data-shot="prod4"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ACT III — NOW SHOWING ===================== -->
+  <section class="act act--showing" id="showing" data-shot="showing" aria-labelledby="showing-title">
+    <div class="shell">
+      <header class="section-head">
+        <p class="eyebrow reveal" data-i18n="showing.eyebrow"></p>
+        <div class="marquee reveal">
+          <span class="marquee__bulbs marquee__bulbs--top" aria-hidden="true"></span>
+          <h2 class="marquee__title" id="showing-title" data-i18n="showing.title"></h2>
+          <span class="marquee__bulbs marquee__bulbs--bottom" aria-hidden="true"></span>
+        </div>
+        <p class="section-head__lead reveal" data-i18n="showing.lead"></p>
+      </header>
+      <div class="filters reveal" id="filters" role="group" data-i18n-attr="aria-label:a11y.filters"></div>
+    </div>
+
+    <div class="strip-wrap">
+      <ul class="strip" id="strip" data-i18n-attr="aria-label:a11y.programme"></ul>
+      <p class="strip__status" id="strip-status" role="status" data-i18n="showing.loading"></p>
+      <noscript><p class="strip__status strip__status--static" data-i18n="showing.noscript"></p></noscript>
+    </div>
+
+    <div class="shell strip-foot">
+      <p class="fineprint" id="example-note" hidden data-i18n="showing.exampleNote"></p>
+      <div class="strip__nav">
+        <button type="button" class="icon-btn icon-btn--lg" id="strip-prev" data-i18n-attr="aria-label:a11y.prev">
+          <svg class="flip-x" width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-chevron"/></svg>
+        </button>
+        <button type="button" class="icon-btn icon-btn--lg" id="strip-next" data-i18n-attr="aria-label:a11y.next">
+          <svg width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-chevron"/></svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== HOUSE RULES ===================== -->
+  <section class="act act--honest" id="honest" data-shot="honest" aria-labelledby="honest-title">
+    <div class="shell">
+      <header class="section-head">
+        <p class="eyebrow reveal" data-i18n="honest.eyebrow"></p>
+        <h2 class="act__title reveal" id="honest-title" data-i18n="honest.title"></h2>
+      </header>
+      <ul class="rules">
+        <li class="rule reveal">
+          <svg class="rule__icon" width="28" height="28" aria-hidden="true" focusable="false"><use href="#i-label"/></svg>
+          <h3 class="rule__title" data-i18n="honest.i1.title"></h3>
+          <p class="rule__text" data-i18n="honest.i1.text"></p>
+        </li>
+        <li class="rule reveal">
+          <svg class="rule__icon" width="28" height="28" aria-hidden="true" focusable="false"><use href="#i-eye"/></svg>
+          <h3 class="rule__title" data-i18n="honest.i2.title"></h3>
+          <p class="rule__text" data-i18n="honest.i2.text"></p>
+        </li>
+        <li class="rule reveal">
+          <svg class="rule__icon" width="28" height="28" aria-hidden="true" focusable="false"><use href="#i-shield"/></svg>
+          <h3 class="rule__title" data-i18n="honest.i3.title"></h3>
+          <p class="rule__text" data-i18n="honest.i3.text"></p>
+        </li>
+        <li class="rule reveal">
+          <svg class="rule__icon" width="28" height="28" aria-hidden="true" focusable="false"><use href="#i-loop"/></svg>
+          <h3 class="rule__title" data-i18n="honest.i4.title"></h3>
+          <p class="rule__text" data-i18n="honest.i4.text"></p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===================== ACT IV — TICKETS ===================== -->
+  <section class="act act--tickets" id="tickets" data-shot="tickets" aria-labelledby="tickets-title">
+    <div class="shell">
+      <header class="section-head">
+        <p class="eyebrow reveal" data-i18n="tickets.eyebrow"></p>
+        <h2 class="act__title reveal" id="tickets-title" data-i18n="tickets.title"></h2>
+        <p class="section-head__lead reveal" data-i18n="tickets.lead"></p>
+      </header>
+
+      <ul class="tickets">
+        <li class="ticket reveal{{featured:screening}}" data-plan="screening">
+          <article class="ticket__body" aria-labelledby="plan-screening-name">
+            <p class="ticket__pick" data-i18n="tickets.pick"></p>
+            <p class="ticket__admit" data-i18n="tickets.admit"></p>
+            <h3 class="ticket__name" id="plan-screening-name" data-i18n="tickets.screening.name"></h3>
+            <p class="ticket__desc" data-i18n="tickets.screening.desc"></p>
+            <p class="ticket__price">
+              <span class="ticket__amount" data-plan-price="screening">{{price:screening}}</span>
+              <span class="ticket__per" data-i18n="tickets.perMonth"></span>
+            </p>
+            <ul class="ticket__features">
+              <li><svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-check"/></svg><span data-i18n="tickets.screening.f1"></span></li>
+              <li><svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-check"/></svg><span data-i18n="tickets.screening.f2"></span></li>
+              <li><svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-check"/></svg><span data-i18n="tickets.screening.f3"></span></li>
+              <li><svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-check"/></svg><span data-i18n="tickets.screening.f4"></span></li>
+            </ul>
+            <a class="btn btn--outline ticket__cta" href="submit.html?plan=screening" aria-labelledby="plan-screening-cta plan-screening-name">
+              <span id="plan-screening-cta" data-i18n="tickets.cta"></span>
+            </a>
+          </article>
+          <div class="ticket__stub" aria-hidden="true">
+            <span class="ticket__barcode"></span>
+            <span class="ticket__serial">№ 001</span>
+          </div>
+        </li>
+
+        <li class="ticket reveal{{featured:premiere}}" data-plan="premiere">
+          <article class="ticket__body" aria-labelledby="plan-premiere-name">
+            <p class="ticket__pick" data-i18n="tickets.pick"></p>
+            <p class="ticket__admit" data-i18n="tickets.admit"></p>
+            <h3 class="ticket__name" id="plan-premiere-name" data-i18n="tickets.premiere.name"></h3>
+            <p class="ticket__desc" data-i18n="tickets.premiere.desc"></p>
+            <p class="ticket__price">
+              <span class="ticket__amount" data-plan-price="premiere">{{price:premiere}}</span>
+              <span class="ticket__per" data-i18n="tickets.perMonth"></span>
+            </p>
+            <ul class="ticket__features">
+              <li><svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-check"/></svg><span data-i18n="tickets.premiere.f1"></span></li>
+              <li><svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-check"/></svg><span data-i18n="tickets.premiere.f2"></span></li>
+              <li><svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-check"/></svg><span data-i18n="tickets.premiere.f3"></span></li>
+              <li><svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-check"/></svg><span data-i18n="tickets.premiere.f4"></span></li>
+            </ul>
+            <a class="btn btn--primary ticket__cta" href="submit.html?plan=premiere" aria-labelledby="plan-premiere-cta plan-premiere-name">
+              <span id="plan-premiere-cta" data-i18n="tickets.cta"></span>
+            </a>
+          </article>
+          <div class="ticket__stub" aria-hidden="true">
+            <span class="ticket__barcode"></span>
+            <span class="ticket__serial">№ 002</span>
+          </div>
+        </li>
+
+        <li class="ticket reveal{{featured:blockbuster}}" data-plan="blockbuster">
+          <article class="ticket__body" aria-labelledby="plan-blockbuster-name">
+            <p class="ticket__pick" data-i18n="tickets.pick"></p>
+            <p class="ticket__admit" data-i18n="tickets.admit"></p>
+            <h3 class="ticket__name" id="plan-blockbuster-name" data-i18n="tickets.blockbuster.name"></h3>
+            <p class="ticket__desc" data-i18n="tickets.blockbuster.desc"></p>
+            <p class="ticket__price">
+              <span class="ticket__amount" data-plan-price="blockbuster">{{price:blockbuster}}</span>
+              <span class="ticket__per" data-i18n="tickets.perMonth"></span>
+            </p>
+            <ul class="ticket__features">
+              <li><svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-check"/></svg><span data-i18n="tickets.blockbuster.f1"></span></li>
+              <li><svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-check"/></svg><span data-i18n="tickets.blockbuster.f2"></span></li>
+              <li><svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-check"/></svg><span data-i18n="tickets.blockbuster.f3"></span></li>
+              <li><svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-check"/></svg><span data-i18n="tickets.blockbuster.f4"></span></li>
+            </ul>
+            <a class="btn btn--outline ticket__cta" href="submit.html?plan=blockbuster" aria-labelledby="plan-blockbuster-cta plan-blockbuster-name">
+              <span id="plan-blockbuster-cta" data-i18n="tickets.cta"></span>
+            </a>
+          </article>
+          <div class="ticket__stub" aria-hidden="true">
+            <span class="ticket__barcode"></span>
+            <span class="ticket__serial">№ 003</span>
+          </div>
+        </li>
+      </ul>
+
+      <p class="fineprint fineprint--center" data-i18n="tickets.taxNote"></p>
+    </div>
+  </section>
+
+  <!-- ===================== QUESTIONS ===================== -->
+  <section class="act act--faq" id="faq" data-shot="faq" aria-labelledby="faq-title">
+    <div class="shell shell--narrow">
+      <header class="section-head">
+        <p class="eyebrow reveal" data-i18n="faq.eyebrow"></p>
+        <h2 class="act__title reveal" id="faq-title" data-i18n="faq.title"></h2>
+      </header>
+      <div class="faq">
+        <details class="faq__item reveal">
+          <summary class="faq__q"><span data-i18n="faq.q1"></span><svg class="faq__icon" width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-plus"/></svg></summary>
+          <div class="faq__a"><p data-i18n="faq.a1"></p></div>
+        </details>
+        <details class="faq__item reveal">
+          <summary class="faq__q"><span data-i18n="faq.q2"></span><svg class="faq__icon" width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-plus"/></svg></summary>
+          <div class="faq__a"><p data-i18n="faq.a2"></p></div>
+        </details>
+        <details class="faq__item reveal">
+          <summary class="faq__q"><span data-i18n="faq.q3"></span><svg class="faq__icon" width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-plus"/></svg></summary>
+          <div class="faq__a"><p data-i18n="faq.a3"></p></div>
+        </details>
+        <details class="faq__item reveal">
+          <summary class="faq__q"><span data-i18n="faq.q4"></span><svg class="faq__icon" width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-plus"/></svg></summary>
+          <div class="faq__a"><p data-i18n="faq.a4"></p></div>
+        </details>
+        <details class="faq__item reveal">
+          <summary class="faq__q"><span data-i18n="faq.q5"></span><svg class="faq__icon" width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-plus"/></svg></summary>
+          <div class="faq__a"><p data-i18n="faq.a5"></p></div>
+        </details>
+        <details class="faq__item reveal">
+          <summary class="faq__q"><span data-i18n="faq.q6"></span><svg class="faq__icon" width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-plus"/></svg></summary>
+          <div class="faq__a"><p data-i18n="faq.a6"></p></div>
+        </details>
+        <details class="faq__item reveal">
+          <summary class="faq__q"><span data-i18n="faq.q7"></span><svg class="faq__icon" width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-plus"/></svg></summary>
+          <div class="faq__a"><p data-i18n="faq.a7"></p></div>
+        </details>
+        <details class="faq__item reveal">
+          <summary class="faq__q"><span data-i18n="faq.q8"></span><svg class="faq__icon" width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-plus"/></svg></summary>
+          <div class="faq__a"><p data-i18n="faq.a8"></p></div>
+        </details>
+        <details class="faq__item reveal">
+          <summary class="faq__q"><span data-i18n="faq.q9"></span><svg class="faq__icon" width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-plus"/></svg></summary>
+          <div class="faq__a"><p data-i18n="faq.a9"></p></div>
+        </details>
+        <details class="faq__item reveal">
+          <summary class="faq__q"><span data-i18n="faq.q10"></span><svg class="faq__icon" width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-plus"/></svg></summary>
+          <div class="faq__a"><p data-i18n="faq.a10"></p></div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FINAL ACT ===================== -->
+  <section class="finale" id="finale" data-shot="finale" aria-labelledby="finale-title">
+    <div class="shell finale__inner">
+      <p class="eyebrow reveal" data-i18n="finale.eyebrow"></p>
+      <h2 class="finale__title" id="finale-title">
+        <span class="line"><span class="line__inner" data-i18n="finale.title1"></span></span>
+        <span class="line"><span class="line__inner line__inner--accent" data-i18n="finale.title2"></span></span>
+      </h2>
+      <p class="finale__lead reveal" data-i18n="finale.lead"></p>
+      <a class="btn btn--primary btn--xl reveal" href="submit.html">
+        <span data-i18n="finale.cta"></span>
+        <svg class="btn__icon" width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg>
+      </a>
+      <dl class="credits reveal">
+        <div class="credits__row"><dt data-i18n="finale.starring"></dt><dd data-i18n="finale.starringValue"></dd></div>
+        <div class="credits__row"><dt data-i18n="finale.directed"></dt><dd data-i18n="finale.directedValue"></dd></div>
+        <div class="credits__row"><dt data-i18n="finale.presented"></dt><dd data-i18n="finale.presentedValue"></dd></div>
+      </dl>
+    </div>
+  </section>
+</main>
+
+<!-- App details -->
+<dialog class="dialog dialog--app" id="app-dialog" aria-labelledby="app-dialog-title">
+  <div class="dialog__panel">
+    <button type="button" class="icon-btn dialog__close" id="app-dialog-close" data-i18n-attr="aria-label:a11y.close">
+      <svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-close"/></svg>
+    </button>
+    <div class="app-detail">
+      <div class="app-detail__poster" id="app-dialog-poster" aria-hidden="true"></div>
+      <div class="app-detail__body">
+        <p class="badges" id="app-dialog-badges"></p>
+        <h2 class="dialog__title" id="app-dialog-title" translate="no"></h2>
+        <p class="app-detail__tagline" id="app-dialog-tagline"></p>
+        <dl class="app-detail__meta">
+          <div><dt data-i18n="app.category"></dt><dd id="app-dialog-category"></dd></div>
+        </dl>
+        <div class="app-detail__about" id="app-dialog-about">
+          <h3 class="app-detail__heading" data-i18n="app.about"></h3>
+          <p id="app-dialog-description"></p>
+        </div>
+        <div class="app-detail__get" id="app-dialog-get">
+          <h3 class="app-detail__heading" data-i18n="app.getIt"></h3>
+          <div class="app-detail__links" id="app-dialog-links"></div>
+          <p class="fineprint" data-i18n="app.externalNote"></p>
+        </div>
+        <p class="fineprint app-detail__note" id="app-dialog-note"></p>
+        <a class="dialog__link" href="guidelines.html#report" data-i18n="app.report"></a>
+      </div>
+    </div>
+  </div>
+</dialog>

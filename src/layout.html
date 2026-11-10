@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="no-js" data-langs="{{langCodes}}" data-rtl="{{rtlCodes}}" data-default-lang="{{defaultLang}}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="{{csp}}">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title data-i18n="{{titleKey}}"></title>
+<meta name="description" content="" data-i18n-attr="content:{{descKey}}">
+<meta name="robots" content="{{robots}}">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#05070a">
+<meta name="format-detection" content="telephone=no">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="{{brand}}">
+<meta property="og:title" content="" data-i18n-attr="content:{{titleKey}}">
+<meta property="og:description" content="" data-i18n-attr="content:{{descKey}}">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<link rel="preload" href="assets/fonts/oswald-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/rubik-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/core.css">
+{{headExtras}}
+<script src="assets/js/boot.js"></script>
+<script type="module" src="assets/js/main.js"></script>
+</head>
+<body class="{{bodyClass}}" data-page="{{page}}">
+<a class="skip-link" href="#main" data-i18n="a11y.skip"></a>
+{{> sprites}}
+{{> header}}
+{{content}}
+{{> footer}}
+{{> consent}}
+<div class="fx fx--grain" aria-hidden="true"></div>
+</body>
+</html>

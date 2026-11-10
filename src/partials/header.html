@@ -1,0 +1,37 @@
+<header class="site-header" id="site-header">
+  <div class="site-header__inner">
+    <a class="brand" href="index.html" data-i18n-attr="aria-label:a11y.home">
+      <svg class="brand__mark" width="28" height="28" aria-hidden="true" focusable="false"><use href="#i-mark"/></svg>
+      <span class="brand__name" translate="no">{{brand}}</span>
+    </a>
+
+    <nav class="nav" id="site-nav" data-i18n-attr="aria-label:a11y.mainNav">
+      <ul class="nav__list">
+        <li><a class="nav__link" href="index.html#showing" data-i18n="nav.showing"></a></li>
+        <li><a class="nav__link" href="index.html#production" data-i18n="nav.how"></a></li>
+        <li><a class="nav__link" href="index.html#tickets" data-i18n="nav.tickets"></a></li>
+        <li><a class="nav__link" href="index.html#faq" data-i18n="nav.faq"></a></li>
+        <li class="nav__cta"><a class="btn btn--primary" href="submit.html" data-i18n="nav.cta"></a></li>
+      </ul>
+    </nav>
+
+    <div class="site-header__tools">
+      <label class="lang">
+        <span class="sr-only" data-i18n="a11y.language"></span>
+        <svg class="lang__icon" width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-globe"/></svg>
+        <select class="lang__select" id="lang-select" autocomplete="off">
+          {{languageOptions}}
+        </select>
+      </label>
+      <button type="button" class="icon-btn js-motion-toggle" aria-pressed="false" data-i18n-attr="aria-label:a11y.motionPause">
+        <svg class="icon-btn__pause" width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-pause"/></svg>
+        <svg class="icon-btn__play" width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-play"/></svg>
+      </button>
+      <a class="btn btn--primary btn--sm header-cta" href="submit.html" data-i18n="nav.cta"></a>
+      <button type="button" class="icon-btn menu-btn" id="menu-btn" aria-expanded="false" aria-controls="site-nav" data-i18n-attr="aria-label:a11y.menuOpen">
+        <svg class="menu-btn__open" width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-menu"/></svg>
+        <svg class="menu-btn__close" width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-close"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
