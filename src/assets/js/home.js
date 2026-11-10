@@ -19,6 +19,7 @@ import { resolveShot, blendShots } from './scene/shots.js';
 
 const root = document.documentElement;
 const LEADER_MIN_MS = 1250;
+const LEADER_MAX_MS = 3200;
 const FILM_SECONDS = 142; // the pretend running time shown in the HUD timecode
 const FRAMES_PER_SECOND = 24;
 
@@ -31,9 +32,17 @@ let ticking = false;
 
 /* -------------------------------- curtain --------------------------------- */
 
-function raiseCurtain(startedAt) {
+/**
+ * The curtain lifts once the countdown has played and the 3D stage has drawn
+ * its first frame, so the opening shot appears complete. A slow device never
+ * holds the page back for long: after LEADER_MAX_MS the curtain lifts anyway.
+ */
+function raiseCurtain(startedAt, stageReady) {
   const leader = qs('#leader');
+  let finished = false;
   const finish = () => {
+    if (finished) return;
+    finished = true;
     if (leader) leader.classList.add('is-done');
     startReveals();
   };
@@ -41,8 +50,11 @@ function raiseCurtain(startedAt) {
     finish();
     return;
   }
-  const wait = Math.max(0, LEADER_MIN_MS - (performance.now() - startedAt));
-  window.setTimeout(finish, wait);
+  const minimum = new Promise((resolve) => {
+    window.setTimeout(resolve, Math.max(0, LEADER_MIN_MS - (performance.now() - startedAt)));
+  });
+  Promise.all([minimum, stageReady]).then(finish);
+  window.setTimeout(finish, LEADER_MAX_MS);
 }
 
 /* --------------------------------- prices --------------------------------- */
@@ -465,8 +477,8 @@ export async function initHome(siteConfig) {
     }
   });
 
-  raiseCurtain(startedAt);
-  initStage();
+  // initStage never rejects: without WebGL it simply resolves and the painted backdrop stays.
+  raiseCurtain(startedAt, initStage());
 
   // Fonts and images can shift the layout after load.
   window.addEventListener('load', () => {

@@ -166,6 +166,15 @@ export function createIcons(T, { count, detail }) {
         if (ndc < limit) target.x = view.cameraX + (limit + Math.abs(ndc - limit) * 0.85) * halfWidth * view.mirror;
       }
     }
+    // Never park a tile in front of the phone's screen: the star stays readable.
+    if (formation === 'orbit' && target.z > center.z - 0.2) {
+      const offsetX = target.x - center.x;
+      const offsetY = target.y - center.y;
+      if (Math.abs(offsetX) < 1.25 && Math.abs(offsetY) < 2) {
+        const side = offsetX === 0 ? (view.narrow ? 1 : view.mirror) : Math.sign(offsetX);
+        target.x = center.x + side * (1.3 + Math.abs(offsetX) * 0.5);
+      }
+    }
     return { scale, faceCamera };
   }
 

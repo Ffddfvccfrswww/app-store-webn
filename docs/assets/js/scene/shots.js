@@ -181,7 +181,7 @@ export const SHOTS = {
 
 /** Changes for tall, narrow screens: the phone moves above the text. */
 const NARROW = {
-  hero: { cam: [0, 0.3, 11.6], look: [0, 0.5, 0], phone: [0, 1.95, 0], scale: 0.78, rot: [0.08, -0.38, 0.03] },
+  hero: { cam: [0, 0.3, 11.6], look: [0, 0.5, 0], phone: [0, 2.2, 0], scale: 0.74, rot: [0.08, -0.38, 0.03] },
   crowd: { cam: [0, 0.3, 13], look: [0, 0.4, 0], phone: [0.5, 2.2, -1.5], scale: 0.68 },
   prod1: { cam: [0, 0.3, 11.8], look: [0, 0.4, 0], phone: [0, 1.85, 0], scale: 0.74 },
   prod2: { cam: [0, 0.3, 11.8], look: [0, 0.4, 0], phone: [0, 1.85, 0], scale: 0.74 },
