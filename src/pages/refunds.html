@@ -1,0 +1,97 @@
+<!--page
+{
+  "file": "refunds.html",
+  "page": "legal",
+  "bodyClass": "page-plain page-legal",
+  "titleKey": "meta.refunds.title",
+  "descKey": "meta.refunds.desc",
+  "css": ["pages"]
+}
+-->
+<main id="main" class="page" tabindex="-1">
+  <div class="shell shell--narrow">
+    {{> legalnav}}
+
+    <article class="doc" lang="en" dir="ltr" data-doc-lang="en">
+      <h1>Refund Policy</h1>
+      <p class="doc__meta">Last updated: {{effectiveDate}}</p>
+
+      <p class="doc__summary"><strong>In short:</strong> you can cancel at any time and you will not be charged again. If you change your mind within 14 days of your first payment, we refund it in full. If we decline your app, you get your money back.</p>
+
+      <h2 id="cancel">1. Cancelling</h2>
+      <p>Plans renew every month until you cancel. You can cancel at any time, using the link in the receipt from our payment provider or by writing to us. Cancellation takes effect at the end of the period you have already paid for: your listing stays online until then and no further charges are made.</p>
+
+      <h2 id="guarantee">2. 14-day refund on your first payment</h2>
+      <p>If you ask within 14 days of your first payment for a listing, we will refund that payment in full and remove the listing. You do not need to give a reason.</p>
+
+      <h2 id="always">3. When we always refund</h2>
+      <ul>
+        <li><strong>We decline your app.</strong> If you paid and we do not accept your app, we refund the payment in full.</li>
+        <li><strong>We cannot publish your listing.</strong> If, for reasons on our side, your listing is not published within 14 days after approval and payment, you may ask for a full refund of that payment.</li>
+        <li><strong>We end your plan without fault on your part.</strong> We refund the unused part of the period you paid for.</li>
+        <li><strong>You were charged by mistake</strong>, for example twice for the same period. We refund the incorrect charge.</li>
+      </ul>
+
+      <h2 id="not">4. When we do not refund</h2>
+      <ul>
+        <li>For the remainder of a month after you cancel, once the 14 days in section 2 have passed. Your listing simply stays online until the end of that month.</li>
+        <li>When a listing is removed because the app or the publisher broke our <a href="terms.html">Terms of Service</a> or <a href="guidelines.html">Content Guidelines</a>, to the extent the law allows.</li>
+      </ul>
+      <p>We do not refund on the basis of results. As our Terms explain, we provide visibility and do not guarantee downloads, installs or revenue.</p>
+
+      <h2 id="how">5. How to ask for a refund</h2>
+      <p>Write to {{mailto:contact.email|the contact details on our <a href="legal.html">Legal Notice</a> page}} from the email address you used to pay, and tell us the name of your app. We reply as quickly as we can, normally within a few business days. Approved refunds are sent through our payment provider to the original payment method; depending on your bank, the money usually arrives within 5 to 10 business days.</p>
+      <p>If something went wrong with a charge, please contact us before opening a dispute with your bank. We can usually fix it faster.</p>
+
+      <h2 id="consumer">6. Your legal rights</h2>
+      <p>This policy is in addition to your rights under the law. If you are a consumer, mandatory rights in your country remain in force, for example the 14-day right of withdrawal for distance contracts in the European Union and the United Kingdom, and cancellation rights under consumer protection law elsewhere. Where the law gives you more than this policy, the law applies.</p>
+
+      <h2 id="taxes">7. Taxes and fees</h2>
+      <p>Refunds include any tax you were charged on the refunded amount. Currency conversion differences and fees charged by your own bank are outside our control.</p>
+
+      <h2 id="contact">8. Contact</h2>
+      <p>{{cfg:operator.legalName|The operator named on our <a href="legal.html">Legal Notice</a> page}}. Email: {{mailto:contact.email|see our <a href="legal.html">Legal Notice</a> page}}.</p>
+    </article>
+
+    <article class="doc" lang="he" dir="rtl" data-doc-lang="he">
+      <h1>מדיניות החזרים וביטולים</h1>
+      <p class="doc__meta">עודכן לאחרונה: {{effectiveDate}}</p>
+
+      <p class="doc__summary"><strong>בקצרה:</strong> אפשר לבטל בכל עת ולא תחויב שוב. אם התחרטת בתוך 14 יום מהתשלום הראשון, נחזיר אותו במלואו. אם לא נאשר את האפליקציה שלך, תקבל את כספך בחזרה.</p>
+
+      <h2 id="cancel-he">1. ביטול</h2>
+      <p>המסלולים מתחדשים מדי חודש עד לביטול. אפשר לבטל בכל עת, באמצעות הקישור שבקבלה מספק התשלומים שלנו או בפנייה אלינו. הביטול נכנס לתוקף בתום התקופה שכבר שולמה: המודעה תישאר באתר עד אז, ולא יבוצעו חיובים נוספים.</p>
+
+      <h2 id="guarantee-he">2. החזר מלא בתוך 14 יום מהתשלום הראשון</h2>
+      <p>אם תפנה אלינו בתוך 14 יום מהתשלום הראשון עבור מודעה, נחזיר לך את מלוא התשלום ונסיר את המודעה. אין צורך לנמק.</p>
+
+      <h2 id="always-he">3. מתי נחזיר תמיד</h2>
+      <ul>
+        <li><strong>לא אישרנו את האפליקציה.</strong> אם שילמת ולא קיבלנו את האפליקציה שלך, נחזיר את מלוא התשלום.</li>
+        <li><strong>לא הצלחנו לפרסם את המודעה.</strong> אם מסיבות התלויות בנו המודעה לא פורסמה בתוך 14 יום מהאישור ומהתשלום, תוכל לבקש החזר מלא של אותו תשלום.</li>
+        <li><strong>סיימנו את המסלול שלא באשמתך.</strong> נחזיר את החלק היחסי של התקופה ששולמה ולא נוצלה.</li>
+        <li><strong>חויבת בטעות</strong>, למשל פעמיים עבור אותה תקופה. נחזיר את החיוב השגוי.</li>
+      </ul>
+
+      <h2 id="not-he">4. מתי לא יינתן החזר</h2>
+      <ul>
+        <li>עבור יתרת החודש לאחר ביטול, לאחר שחלפו 14 הימים שבסעיף 2. המודעה פשוט תישאר באתר עד סוף אותו חודש.</li>
+        <li>כאשר מודעה הוסרה משום שהאפליקציה או המפרסם הפרו את <a href="terms.html">תנאי השימוש</a> או את <a href="guidelines.html">כללי התוכן</a>, ככל שהדין מתיר זאת.</li>
+      </ul>
+      <p>איננו מעניקים החזר על בסיס תוצאות. כפי שמוסבר בתנאים, אנו מספקים חשיפה ואיננו מבטיחים הורדות, התקנות או הכנסות.</p>
+
+      <h2 id="how-he">5. איך מבקשים החזר</h2>
+      <p>יש לכתוב אל {{mailto:contact.email|פרטי הקשר שבעמוד <a href="legal.html">ההודעה המשפטית</a>}} מכתובת הדוא"ל שבה השתמשת בתשלום, ולציין את שם האפליקציה. נשיב בהקדם האפשרי, בדרך כלל בתוך ימי עסקים ספורים. החזר שאושר יישלח באמצעות ספק התשלומים לאמצעי התשלום המקורי; בהתאם לבנק שלך, הכסף מגיע בדרך כלל בתוך 5 עד 10 ימי עסקים.</p>
+      <p>אם אירעה תקלה בחיוב, אנא פנה אלינו לפני פתיחת מחלוקת מול הבנק או חברת האשראי. לרוב נוכל לפתור זאת מהר יותר.</p>
+
+      <h2 id="consumer-he">6. זכויותיך לפי דין</h2>
+      <p>מדיניות זו מוסיפה על זכויותיך לפי הדין ואינה גורעת מהן. אם אתה צרכן, הזכויות הקוגנטיות במדינתך נשארות בתוקף, לרבות זכות הביטול בעסקת מכר מרחוק ובעסקה מתמשכת לפי חוק הגנת הצרכן, התשמ"א-1981 ותקנות הגנת הצרכן (ביטול עסקה), התשע"א-2010 בישראל, וזכות החרטה בת 14 הימים בחוזים מרחוק באיחוד האירופי ובבריטניה. כאשר הדין מעניק לך יותר ממדיניות זו, יחול הדין.</p>
+
+      <h2 id="taxes-he">7. מסים ועמלות</h2>
+      <p>ההחזר כולל את המס שנגבה ממך על הסכום המוחזר. הפרשי שער ועמלות שגובה הבנק שלך אינם בשליטתנו.</p>
+
+      <h2 id="contact-he">8. יצירת קשר</h2>
+      <p>{{cfg:operator.legalName|המפעיל ששמו מופיע בעמוד <a href="legal.html">ההודעה המשפטית</a>}}. דוא"ל: {{mailto:contact.email|ראה בעמוד <a href="legal.html">ההודעה המשפטית</a>}}.</p>
+    </article>
+  </div>
+</main>

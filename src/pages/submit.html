@@ -1,0 +1,220 @@
+<!--page
+{
+  "file": "submit.html",
+  "page": "submit",
+  "bodyClass": "page-plain page-submit",
+  "titleKey": "meta.submit.title",
+  "descKey": "meta.submit.desc",
+  "css": ["pages"]
+}
+-->
+<main id="main" class="page" tabindex="-1">
+  <div class="shell shell--narrow">
+    <header class="page-head">
+      <p class="eyebrow reveal"><span class="eyebrow__dot" aria-hidden="true"></span><span data-i18n="submit.eyebrow"></span></p>
+      <h1 class="page-title reveal" data-i18n="submit.title"></h1>
+      <p class="page-lead reveal" data-i18n="submit.lead"></p>
+    </header>
+
+    <section class="notice" id="submit-closed" hidden aria-labelledby="submit-closed-title">
+      <h2 class="notice__title" id="submit-closed-title" data-i18n="submit.closedTitle"></h2>
+      <p data-i18n="submit.closedText"></p>
+      <a class="btn btn--outline" href="index.html" data-i18n="submit.backHome"></a>
+    </section>
+
+    <p class="notice notice--warn" id="submit-framed" hidden role="alert" data-i18n="submit.errFramed"></p>
+
+    <noscript><p class="notice" data-i18n="submit.noscript"></p></noscript>
+
+    <form class="form" id="submit-form" novalidate hidden>
+      <p class="form__required" data-i18n="submit.requiredNote"></p>
+      <div class="form__errors" id="form-errors" role="alert" tabindex="-1" hidden></div>
+
+      <fieldset class="form__group">
+        <legend class="form__legend" data-i18n="submit.planLegend"></legend>
+        <div class="plan-options" id="plan-options">
+          <label class="plan-option">
+            <input type="radio" name="plan" value="screening" aria-describedby="plan-error">
+            <span class="plan-option__box">
+              <span class="plan-option__name" data-i18n="tickets.screening.name"></span>
+              <span class="plan-option__price"><span data-plan-price="screening">{{price:screening}}</span> <span data-i18n="tickets.perMonth"></span></span>
+              <span class="plan-option__desc" data-i18n="tickets.screening.desc"></span>
+            </span>
+          </label>
+          <label class="plan-option">
+            <input type="radio" name="plan" value="premiere" aria-describedby="plan-error">
+            <span class="plan-option__box">
+              <span class="plan-option__name" data-i18n="tickets.premiere.name"></span>
+              <span class="plan-option__price"><span data-plan-price="premiere">{{price:premiere}}</span> <span data-i18n="tickets.perMonth"></span></span>
+              <span class="plan-option__desc" data-i18n="tickets.premiere.desc"></span>
+            </span>
+          </label>
+          <label class="plan-option">
+            <input type="radio" name="plan" value="blockbuster" aria-describedby="plan-error">
+            <span class="plan-option__box">
+              <span class="plan-option__name" data-i18n="tickets.blockbuster.name"></span>
+              <span class="plan-option__price"><span data-plan-price="blockbuster">{{price:blockbuster}}</span> <span data-i18n="tickets.perMonth"></span></span>
+              <span class="plan-option__desc" data-i18n="tickets.blockbuster.desc"></span>
+            </span>
+          </label>
+        </div>
+        <p class="field__error" id="plan-error" hidden></p>
+      </fieldset>
+
+      <fieldset class="form__group">
+        <legend class="form__legend" data-i18n="submit.appLegend"></legend>
+
+        <div class="field">
+          <label class="field__label" for="f-app-name"><span data-i18n="submit.appName"></span> <span class="field__req" aria-hidden="true">*</span></label>
+          <input class="field__input" id="f-app-name" name="appName" type="text" required maxlength="60" autocomplete="off" aria-describedby="f-app-name-error">
+          <p class="field__error" id="f-app-name-error" hidden></p>
+        </div>
+
+        <div class="field">
+          <label class="field__label" for="f-app-url"><span data-i18n="submit.appUrl"></span> <span class="field__req" aria-hidden="true">*</span></label>
+          <input class="field__input" id="f-app-url" name="appUrl" type="url" required maxlength="300" inputmode="url" autocomplete="off" autocapitalize="off" spellcheck="false" dir="ltr" placeholder="https://" aria-describedby="f-app-url-hint f-app-url-error">
+          <p class="field__hint" id="f-app-url-hint" data-i18n="submit.appUrlHint"></p>
+          <p class="field__error" id="f-app-url-error" hidden></p>
+        </div>
+
+        <div class="field">
+          <label class="field__label" for="f-app-url2" data-i18n="submit.appUrl2"></label>
+          <input class="field__input" id="f-app-url2" name="appUrl2" type="url" maxlength="300" inputmode="url" autocomplete="off" autocapitalize="off" spellcheck="false" dir="ltr" placeholder="https://" aria-describedby="f-app-url2-error">
+          <p class="field__error" id="f-app-url2-error" hidden></p>
+        </div>
+
+        <div class="field">
+          <label class="field__label" for="f-category"><span data-i18n="submit.category"></span> <span class="field__req" aria-hidden="true">*</span></label>
+          <select class="field__input field__input--select" id="f-category" name="category" required aria-describedby="f-category-error">
+            <option value="" data-i18n="submit.categoryPh"></option>
+            <option value="productivity" data-i18n="categories.productivity"></option>
+            <option value="health" data-i18n="categories.health"></option>
+            <option value="finance" data-i18n="categories.finance"></option>
+            <option value="education" data-i18n="categories.education"></option>
+            <option value="entertainment" data-i18n="categories.entertainment"></option>
+            <option value="games" data-i18n="categories.games"></option>
+            <option value="lifestyle" data-i18n="categories.lifestyle"></option>
+            <option value="travel" data-i18n="categories.travel"></option>
+            <option value="tools" data-i18n="categories.tools"></option>
+            <option value="social" data-i18n="categories.social"></option>
+            <option value="music" data-i18n="categories.music"></option>
+            <option value="photo" data-i18n="categories.photo"></option>
+            <option value="shopping" data-i18n="categories.shopping"></option>
+            <option value="food" data-i18n="categories.food"></option>
+            <option value="business" data-i18n="categories.business"></option>
+            <option value="other" data-i18n="categories.other"></option>
+          </select>
+          <p class="field__error" id="f-category-error" hidden></p>
+        </div>
+
+        <div class="field">
+          <label class="field__label" for="f-tagline"><span data-i18n="submit.tagline"></span> <span class="field__req" aria-hidden="true">*</span></label>
+          <input class="field__input" id="f-tagline" name="tagline" type="text" required maxlength="120" autocomplete="off" aria-describedby="f-tagline-hint f-tagline-error">
+          <p class="field__hint" id="f-tagline-hint" data-i18n="submit.taglineHint"></p>
+          <p class="field__error" id="f-tagline-error" hidden></p>
+        </div>
+
+        <div class="field">
+          <label class="field__label" for="f-description" data-i18n="submit.description"></label>
+          <textarea class="field__input field__input--area" id="f-description" name="description" rows="4" maxlength="600" aria-describedby="f-description-hint f-description-error"></textarea>
+          <p class="field__hint" id="f-description-hint" data-i18n="submit.descriptionHint"></p>
+          <p class="field__error" id="f-description-error" hidden></p>
+        </div>
+      </fieldset>
+
+      <fieldset class="form__group">
+        <legend class="form__legend" data-i18n="submit.youLegend"></legend>
+
+        <div class="field">
+          <label class="field__label" for="f-name"><span data-i18n="submit.name"></span> <span class="field__req" aria-hidden="true">*</span></label>
+          <input class="field__input" id="f-name" name="name" type="text" required maxlength="80" autocomplete="name" aria-describedby="f-name-error">
+          <p class="field__error" id="f-name-error" hidden></p>
+        </div>
+
+        <div class="field">
+          <label class="field__label" for="f-email"><span data-i18n="submit.email"></span> <span class="field__req" aria-hidden="true">*</span></label>
+          <input class="field__input" id="f-email" name="email" type="email" required maxlength="254" inputmode="email" autocomplete="email" autocapitalize="off" spellcheck="false" dir="ltr" aria-describedby="f-email-hint f-email-error">
+          <p class="field__hint" id="f-email-hint" data-i18n="submit.emailHint"></p>
+          <p class="field__error" id="f-email-error" hidden></p>
+        </div>
+
+        <div class="field">
+          <label class="field__label" for="f-company" data-i18n="submit.company"></label>
+          <input class="field__input" id="f-company" name="company" type="text" maxlength="100" autocomplete="organization" aria-describedby="f-company-error">
+          <p class="field__error" id="f-company-error" hidden></p>
+        </div>
+
+        <div class="field">
+          <label class="field__label" for="f-message" data-i18n="submit.message"></label>
+          <textarea class="field__input field__input--area" id="f-message" name="message" rows="4" maxlength="1000" aria-describedby="f-message-error"></textarea>
+          <p class="field__error" id="f-message-error" hidden></p>
+        </div>
+      </fieldset>
+
+      <fieldset class="form__group">
+        <legend class="form__legend" data-i18n="submit.confirmLegend"></legend>
+
+        <div class="check">
+          <input class="check__input" id="f-rights" name="rights" type="checkbox" required aria-describedby="f-rights-error">
+          <label class="check__label" for="f-rights" data-i18n="submit.cRights"></label>
+          <p class="field__error" id="f-rights-error" hidden></p>
+        </div>
+
+        <div class="check">
+          <input class="check__input" id="f-terms" name="terms" type="checkbox" required aria-describedby="f-terms-error">
+          <label class="check__label" for="f-terms" data-i18n-rich="submit.cTerms"><a data-i18n-slot="1" href="terms.html" target="_blank" rel="noopener noreferrer"></a><a data-i18n-slot="2" href="guidelines.html" target="_blank" rel="noopener noreferrer"></a></label>
+          <p class="field__error" id="f-terms-error" hidden></p>
+        </div>
+
+        <div class="check">
+          <input class="check__input" id="f-age" name="age" type="checkbox" required aria-describedby="f-age-error">
+          <label class="check__label" for="f-age" data-i18n="submit.cAge"></label>
+          <p class="field__error" id="f-age-error" hidden></p>
+        </div>
+
+        <p class="form__privacy" data-i18n-rich="submit.privacyNote"><a data-i18n-slot="1" href="privacy.html" target="_blank" rel="noopener noreferrer"></a></p>
+      </fieldset>
+
+      <div class="hp" aria-hidden="true">
+        <label for="f-website">Website</label>
+        <input id="f-website" name="website" type="text" tabindex="-1" autocomplete="off">
+      </div>
+
+      <p class="form__status" id="form-status" role="status" hidden></p>
+
+      <button type="submit" class="btn btn--primary btn--lg" id="submit-btn">
+        <span id="submit-btn-label" data-i18n="submit.send"></span>
+        <svg class="btn__icon" width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg>
+      </button>
+    </form>
+
+    <section class="result" id="submit-success" hidden tabindex="-1" aria-labelledby="submit-success-title">
+      <svg class="result__icon" width="44" height="44" aria-hidden="true" focusable="false"><use href="#i-check"/></svg>
+      <h2 class="result__title" id="submit-success-title" data-i18n="submit.successTitle"></h2>
+      <p data-i18n="submit.successText"></p>
+      <p id="submit-success-pay" hidden data-i18n="submit.successPay"></p>
+      <p id="submit-success-later" hidden data-i18n="submit.successPayLater"></p>
+      <div class="result__actions">
+        <a class="btn btn--primary btn--lg" id="submit-checkout" hidden rel="noopener noreferrer">
+          <span data-i18n="submit.successPayCta"></span>
+          <svg class="btn__icon" width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg>
+        </a>
+        <a class="btn btn--outline btn--lg" href="index.html" data-i18n="submit.backHome"></a>
+      </div>
+    </section>
+
+    <section class="result" id="submit-mail" hidden tabindex="-1" aria-labelledby="submit-mail-title">
+      <h2 class="result__title" id="submit-mail-title" data-i18n="submit.mailTitle"></h2>
+      <p data-i18n="submit.mailText"></p>
+      <p class="result__address"><a id="submit-mail-address" href="index.html" dir="ltr"></a></p>
+      <label class="sr-only" for="submit-mail-body" data-i18n="submit.mailCopy"></label>
+      <textarea class="field__input field__input--area result__body" id="submit-mail-body" rows="12" readonly></textarea>
+      <div class="result__actions">
+        <a class="btn btn--primary" id="submit-mail-open" href="index.html" data-i18n="submit.mailOpen"></a>
+        <button type="button" class="btn btn--outline" id="submit-mail-copy" data-i18n="submit.mailCopy"></button>
+        <a class="btn btn--ghost" href="index.html" data-i18n="submit.backHome"></a>
+      </div>
+      <p id="submit-mail-pay" hidden data-i18n="submit.successPayLater"></p>
+    </section>
+  </div>
+</main>

@@ -16,13 +16,34 @@
       "title": "Scene missing — {brand}",
       "desc": "The page you were looking for could not be found."
     },
-    "privacy": { "title": "Privacy Policy — {brand}", "desc": "How {brand} handles personal data." },
-    "terms": { "title": "Terms of Service — {brand}", "desc": "The terms that apply when you use {brand}." },
-    "cookies": { "title": "Cookie Policy — {brand}", "desc": "What {brand} stores on your device and why." },
-    "refunds": { "title": "Refund Policy — {brand}", "desc": "Cancellations, refunds and withdrawal rights at {brand}." },
-    "guidelines": { "title": "Content Guidelines — {brand}", "desc": "What can be listed on {brand} and how to report a listing." },
-    "accessibility": { "title": "Accessibility — {brand}", "desc": "The accessibility statement of {brand}." },
-    "notice": { "title": "Legal Notice — {brand}", "desc": "Who operates {brand} and how to get in touch." }
+    "privacy": {
+      "title": "Privacy Policy — {brand}",
+      "desc": "How {brand} handles personal data."
+    },
+    "terms": {
+      "title": "Terms of Service — {brand}",
+      "desc": "The terms that apply when you use {brand}."
+    },
+    "cookies": {
+      "title": "Cookie Policy — {brand}",
+      "desc": "What {brand} stores on your device and why."
+    },
+    "refunds": {
+      "title": "Refund Policy — {brand}",
+      "desc": "Cancellations, refunds and withdrawal rights at {brand}."
+    },
+    "guidelines": {
+      "title": "Content Guidelines — {brand}",
+      "desc": "What can be listed on {brand} and how to report a listing."
+    },
+    "accessibility": {
+      "title": "Accessibility — {brand}",
+      "desc": "The accessibility statement of {brand}."
+    },
+    "notice": {
+      "title": "Legal Notice — {brand}",
+      "desc": "Who operates {brand} and how to get in touch."
+    }
   },
   "a11y": {
     "skip": "Skip to main content",
@@ -32,7 +53,6 @@
     "footerNav": "Footer navigation",
     "language": "Language",
     "motionPause": "Pause animations",
-    "motionPlay": "Play animations",
     "newTab": "opens in a new tab",
     "close": "Close",
     "prev": "Previous",
@@ -46,8 +66,7 @@
     "how": "How it works",
     "tickets": "Tickets",
     "faq": "FAQ",
-    "cta": "Premiere your app",
-    "home": "Home"
+    "cta": "Premiere your app"
   },
   "hero": {
     "eyebrow": "A cinematic stage for apps",
@@ -72,7 +91,6 @@
   "production": {
     "eyebrow": "Act II — The production",
     "title": "How your premiere is made",
-    "stepLabel": "Step {n} of {total}",
     "s1": {
       "title": "Submit your app",
       "text": "Tell us about your app and choose a ticket. It takes a few minutes and needs no technical skills."
@@ -100,13 +118,13 @@
     "headliner": "Headliner",
     "exampleNote": "Example listings are shown for illustration only. Their names and details are fictitious, and any resemblance to real products is coincidental.",
     "empty": "No apps in this category yet.",
-    "details": "View details",
     "loading": "Loading the programme…",
     "error": "The programme could not be loaded. Please refresh the page.",
     "noscript": "Please enable JavaScript to browse the programme.",
     "openSeatTitle": "Your app here",
     "openSeatText": "This seat is open.",
-    "openSeatCta": "Take the stage"
+    "openSeatCta": "Take the stage",
+    "count": "{count} apps on stage now"
   },
   "categories": {
     "productivity": "Productivity",
@@ -190,7 +208,14 @@
       "f2": "First positions in Now Showing",
       "f3": "Rotation in the “Tonight's headliner” spot on the home page",
       "f4": "Highlighted headliner poster"
-    }
+    },
+    "perDay": "About {price} a day",
+    "trust1": "Submitting is free",
+    "trust2": "Full refund within 14 days of your first payment",
+    "trust3": "Cancel anytime",
+    "spotsOpen": "{left} of {total} spots open",
+    "spotsFull": "All spots are taken",
+    "waitlist": "Join the waiting list"
   },
   "faq": {
     "eyebrow": "Questions",
@@ -228,6 +253,16 @@
     "directedValue": "You",
     "presented": "Presented by",
     "presentedValue": "{brand}"
+  },
+  "share": {
+    "eyebrow": "Pass it on",
+    "title": "Know an app that deserves a premiere?",
+    "text": "Send its maker an invitation. Good apps should not sit in the back row.",
+    "cta": "Send an invitation",
+    "copied": "Link copied",
+    "app": "Share this listing",
+    "message": "{brand}: a cinematic stage for apps. Every app deserves a premiere.",
+    "appMessage": "{app} is now showing on {brand}."
   },
   "footer": {
     "blurb": "A cinematic stage for apps.",
@@ -311,6 +346,7 @@
     "errNetwork": "Something went wrong and your submission was not sent. Please try again in a moment.",
     "errTooFast": "That was quick. Please review your details and send again.",
     "errFramed": "For your security, this form cannot be used inside another website. Please open it in its own tab.",
+    "noscript": "This form needs JavaScript. Please enable it in your browser, or contact us using the details on our Legal Notice page.",
     "closedTitle": "Submissions open soon",
     "closedText": "We are putting the final touches on the stage. Please check back shortly.",
     "successTitle": "Thank you. We have your submission.",
@@ -325,7 +361,9 @@
     "mailCopied": "Copied",
     "mailOpen": "Open email app",
     "mailSubject": "App submission: {app}",
-    "mailPlan": "Ticket"
+    "mailPlan": "Ticket",
+    "progress": "Form progress",
+    "progressValue": "{percent}% complete"
   },
   "thanks": {
     "eyebrow": "Curtain call",
@@ -342,8 +380,6 @@
   },
   "legal": {
     "langNotice": "This document is available in English and Hebrew. If the two versions differ, the English version prevails.",
-    "updated": "Last updated",
-    "back": "Back to home",
     "docs": "Legal documents"
   }
 }

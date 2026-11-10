@@ -1,0 +1,127 @@
+<!--page
+{
+  "file": "cookies.html",
+  "page": "legal",
+  "bodyClass": "page-plain page-legal",
+  "titleKey": "meta.cookies.title",
+  "descKey": "meta.cookies.desc",
+  "css": ["pages"]
+}
+-->
+<main id="main" class="page" tabindex="-1">
+  <div class="shell shell--narrow">
+    {{> legalnav}}
+
+    <article class="doc" lang="en" dir="ltr" data-doc-lang="en">
+      <h1>Cookie Policy</h1>
+      <p class="doc__meta">Last updated: {{effectiveDate}}</p>
+
+      <p class="doc__summary"><strong>In short:</strong> {{brand}} sets no cookies. It keeps three small preferences in your browser so the site works the way you asked. Nothing is used for advertising or tracking.</p>
+
+      <h2 id="what">1. What this page covers</h2>
+      <p>Websites can store small pieces of information on your device, either as cookies or in the browser's “local storage”. The law treats both in the same way, so this page explains everything the Site stores, whatever the technique.</p>
+
+      <h2 id="essential">2. What we store: essential preferences only</h2>
+      <p>The Site uses the browser's local storage for three items. They are needed for features you asked for, they stay on your device, and they are never sent to us or to anyone else. Because they are strictly necessary, the law does not require consent for them.</p>
+      <div class="doc__table-wrap">
+        <table>
+          <thead>
+            <tr><th scope="col">Name</th><th scope="col">What it remembers</th><th scope="col">How long</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><code>site:lang</code></td><td>The language you chose</td><td>Until you clear your browser's site data</td></tr>
+            <tr><td><code>site:motion</code></td><td>Whether you paused or resumed animations</td><td>Until you clear your browser's site data</td></tr>
+            <tr><td><code>site:consent</code></td><td>Your privacy choice, the policy version and the date you made it</td><td>Until you clear your browser's site data, or until we ask again after a policy change</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 id="analytics">3. Statistics: off unless you turn them on</h2>
+      {{#if cfg:analytics.enabled}}
+      <p>If you agree in the privacy settings, the Site loads a privacy-friendly statistics service that counts visits in aggregated form. It does not build a profile of you and it is not used for advertising. It stays off until you say yes, and you can switch it off again at any time.</p>
+      {{else}}
+      <p>The Site does not use any analytics or statistics service at the moment. If we add one in the future, it will be a privacy-friendly service, it will stay off until you agree, and this page will be updated first.</p>
+      {{/if}}
+
+      <h2 id="none">4. What we never use</h2>
+      <ul>
+        <li>No advertising or retargeting cookies.</li>
+        <li>No social media trackers or embedded third-party widgets.</li>
+        <li>No fingerprinting.</li>
+        <li>No fonts, scripts or images loaded from other companies' servers: everything the Site needs is served from the Site itself.</li>
+      </ul>
+
+      <h2 id="third">5. Other websites</h2>
+      <p>When you follow a link to an app store, a publisher's website or our payment provider's checkout page, you leave the Site. Those websites may set their own cookies under their own policies.</p>
+
+      <h2 id="control">6. Your choices</h2>
+      <ul>
+        <li>Open <strong>Privacy settings</strong> at the bottom of any page to see or change your choice.</li>
+        <li>You can delete the stored preferences at any time by clearing this site's data in your browser. The Site will then behave as on a first visit.</li>
+        <li>If your browser sends a <strong>Global Privacy Control</strong> signal, we honour it: optional storage stays off.</li>
+      </ul>
+
+      <h2 id="changes">7. Changes</h2>
+      <p>If we change what the Site stores, we will update this page and, where consent is needed, ask you again.</p>
+
+      <h2 id="contact">8. Contact</h2>
+      <p>Questions: {{mailto:contact.privacyEmail,contact.email|see our <a href="legal.html">Legal Notice</a> page}}. See also our <a href="privacy.html">Privacy Policy</a>.</p>
+    </article>
+
+    <article class="doc" lang="he" dir="rtl" data-doc-lang="he">
+      <h1>מדיניות עוגיות</h1>
+      <p class="doc__meta">עודכן לאחרונה: {{effectiveDate}}</p>
+
+      <p class="doc__summary"><strong>בקצרה:</strong> {{brand}} אינו שומר עוגיות (cookies). האתר שומר בדפדפן שלך שלוש העדפות קטנות כדי שיפעל כפי שביקשת. שום דבר אינו משמש לפרסום או למעקב.</p>
+
+      <h2 id="what-he">1. במה עוסק עמוד זה</h2>
+      <p>אתרים יכולים לשמור פיסות מידע קטנות במכשיר שלך, כעוגיות או ב“אחסון המקומי” של הדפדפן. הדין מתייחס לשתי השיטות באותו אופן, ולכן עמוד זה מסביר את כל מה שהאתר שומר, בכל שיטה.</p>
+
+      <h2 id="essential-he">2. מה אנו שומרים: העדפות חיוניות בלבד</h2>
+      <p>האתר משתמש באחסון המקומי של הדפדפן לשלושה פריטים. הם נדרשים לתכונות שביקשת, נשארים במכשיר שלך ואינם נשלחים אלינו או לכל גורם אחר. מאחר שהם הכרחיים לחלוטין, הדין אינו דורש הסכמה לשמירתם.</p>
+      <div class="doc__table-wrap">
+        <table>
+          <thead>
+            <tr><th scope="col">שם</th><th scope="col">מה נשמר</th><th scope="col">לכמה זמן</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><code dir="ltr">site:lang</code></td><td>השפה שבחרת</td><td>עד שתמחק את נתוני האתר בדפדפן</td></tr>
+            <tr><td><code dir="ltr">site:motion</code></td><td>האם השהית או חידשת את האנימציות</td><td>עד שתמחק את נתוני האתר בדפדפן</td></tr>
+            <tr><td><code dir="ltr">site:consent</code></td><td>בחירת הפרטיות שלך, גרסת המדיניות ותאריך הבחירה</td><td>עד שתמחק את נתוני האתר בדפדפן, או עד שנשאל שוב בעקבות שינוי במדיניות</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 id="analytics-he">3. סטטיסטיקה: כבויה אלא אם הפעלת אותה</h2>
+      {{#if cfg:analytics.enabled}}
+      <p>אם תסכים לכך בהגדרות הפרטיות, האתר יטען שירות סטטיסטיקה ידידותי לפרטיות שסופר ביקורים באופן מצטבר. הוא אינו בונה פרופיל שלך ואינו משמש לפרסום. הוא נשאר כבוי עד שתאשר, ואפשר לכבות אותו שוב בכל עת.</p>
+      {{else}}
+      <p>האתר אינו משתמש כרגע בשום שירות סטטיסטיקה או ניתוח נתונים. אם נוסיף שירות כזה בעתיד, הוא יהיה ידידותי לפרטיות, יישאר כבוי עד שתסכים, ועמוד זה יעודכן קודם לכן.</p>
+      {{/if}}
+
+      <h2 id="none-he">4. במה איננו משתמשים לעולם</h2>
+      <ul>
+        <li>אין עוגיות פרסום או שיווק מחדש.</li>
+        <li>אין רכיבי מעקב של רשתות חברתיות ואין רכיבים מוטמעים של צד שלישי.</li>
+        <li>אין זיהוי מכשיר באמצעות “טביעת אצבע”.</li>
+        <li>אין גופנים, סקריפטים או תמונות שנטענים משרתים של חברות אחרות: כל מה שהאתר צריך מוגש מהאתר עצמו.</li>
+      </ul>
+
+      <h2 id="third-he">5. אתרים אחרים</h2>
+      <p>כאשר אתה לוחץ על קישור לחנות אפליקציות, לאתר של מפרסם או לדף התשלום של ספק התשלומים שלנו, אתה עוזב את האתר. אתרים אלה עשויים לשמור עוגיות משלהם לפי המדיניות שלהם.</p>
+
+      <h2 id="control-he">6. הבחירות שלך</h2>
+      <ul>
+        <li>פתח את <strong>הגדרות פרטיות</strong> בתחתית כל עמוד כדי לראות או לשנות את בחירתך.</li>
+        <li>אפשר למחוק את ההעדפות השמורות בכל עת על ידי מחיקת נתוני האתר בדפדפן. האתר יתנהג אז כמו בביקור ראשון.</li>
+        <li>אם הדפדפן שלך שולח אות <strong>Global Privacy Control</strong>, אנו מכבדים אותו: אחסון שאינו חיוני יישאר כבוי.</li>
+      </ul>
+
+      <h2 id="changes-he">7. שינויים</h2>
+      <p>אם נשנה את מה שהאתר שומר, נעדכן עמוד זה, וכאשר נדרשת הסכמה נשאל אותך מחדש.</p>
+
+      <h2 id="contact-he">8. יצירת קשר</h2>
+      <p>שאלות: {{mailto:contact.privacyEmail,contact.email|ראה בעמוד <a href="legal.html">ההודעה המשפטית</a>}}. ראה גם את <a href="privacy.html">מדיניות הפרטיות</a>.</p>
+    </article>
+  </div>
+</main>

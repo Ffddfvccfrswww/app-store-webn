@@ -1,0 +1,119 @@
+<!--page
+{
+  "file": "legal.html",
+  "page": "legal",
+  "bodyClass": "page-plain page-legal",
+  "titleKey": "meta.notice.title",
+  "descKey": "meta.notice.desc",
+  "css": ["pages"]
+}
+-->
+<main id="main" class="page" tabindex="-1">
+  <div class="shell shell--narrow">
+    {{> legalnav}}
+
+    <article class="doc" lang="en" dir="ltr" data-doc-lang="en">
+      <h1>Legal Notice</h1>
+      <p class="doc__meta">Last updated: {{effectiveDate}}</p>
+
+      <h2 id="operator">1. Who operates this website</h2>
+      {{#if cfg:operator.legalName}}
+      <p><strong>{{cfg:operator.legalName}}</strong>{{#if cfg:operator.address}}<br>{{cfg:operator.address}}{{/if}}{{#if cfg:operator.country}}<br>{{cfg:operator.country}}{{/if}}</p>
+      <ul>
+        {{#if cfg:operator.registrationId}}<li>Registration number: {{cfg:operator.registrationId}}</li>{{/if}}
+        {{#if cfg:operator.vatId}}<li>VAT number: {{cfg:operator.vatId}}</li>{{/if}}
+        <li>Email: {{mailto:contact.email|<span class="doc__todo">to be completed</span>}}</li>
+        {{#if cfg:contact.phone}}<li>Phone: {{cfg:contact.phone}}</li>{{/if}}
+      </ul>
+      {{else}}
+      <p><span class="doc__todo">The operator's name, address and contact details will be published here before the website opens to the public.</span></p>
+      {{/if}}
+      <p>{{brand}} is the name of the service. The person or company named above is responsible for the content of this website.</p>
+
+      <h2 id="contacts">2. Contact points</h2>
+      <ul>
+        <li>General enquiries, submissions, reports about listings: {{mailto:contact.email|<span class="doc__todo">to be completed</span>}}</li>
+        <li>Privacy: {{mailto:contact.privacyEmail,contact.email|<span class="doc__todo">to be completed</span>}}</li>
+        <li>Accessibility: {{mailto:contact.accessibilityEmail,contact.email|<span class="doc__todo">to be completed</span>}}</li>
+        <li>Security: {{mailto:contact.securityEmail,contact.email|<span class="doc__todo">to be completed</span>}}</li>
+      </ul>
+
+      <h2 id="advertising">3. Advertising disclosure</h2>
+      <p>{{brand}} is an advertising service. Every app shown in “Now Showing” is a paid placement and is labelled “Sponsored”. Publishers pay us a monthly fee to be listed. We do not receive commission on downloads or purchases, and a listing is not a recommendation.</p>
+
+      <h2 id="trademarks">4. Trademarks</h2>
+      <p>Apple and App Store are trademarks of Apple Inc. Google Play is a trademark of Google LLC. All other product names, logos and brands shown in listings belong to their respective owners and are used by the publishers who own them or are authorised to use them. {{brand}} is independent and is not affiliated with, sponsored by or endorsed by Apple, Google or any listed publisher.</p>
+
+      <h2 id="links">5. External links</h2>
+      <p>The Site links to app stores and to publishers' websites. We check links when a listing is published, but we do not control those websites and are not responsible for their content. If you find a link that leads somewhere unlawful or misleading, please <a href="guidelines.html#report">report it</a> and we will remove it.</p>
+
+      <h2 id="security">6. Reporting a security problem</h2>
+      <p>If you believe you have found a security vulnerability in the Site, please tell us privately at {{mailto:contact.securityEmail,contact.email|the email address published above}} and give us reasonable time to fix it before making it public. We will not take legal action against people who report problems in good faith, who avoid accessing other people's data, and who do not disrupt the service. We do not run a paid bug bounty programme.</p>
+
+      <h2 id="disputes">7. Dispute resolution</h2>
+      <p>We prefer to solve problems directly, so please write to us first. We do not take part in dispute resolution procedures before consumer arbitration bodies unless the law obliges us to.</p>
+
+      <h2 id="credits">8. Open-source credits</h2>
+      <p>The Site uses the following open-source components, with thanks to their authors:</p>
+      <ul>
+        <li>three.js, MIT License. Copyright the three.js authors.</li>
+        <li>Oswald typeface, SIL Open Font License 1.1. Copyright The Oswald Project Authors.</li>
+        <li>Rubik typeface, SIL Open Font License 1.1. Copyright The Rubik Project Authors.</li>
+        <li>Karantina typeface, SIL Open Font License 1.1. Copyright The Karantina Project Authors.</li>
+      </ul>
+      <p>The licence texts are published with the files they apply to.</p>
+    </article>
+
+    <article class="doc" lang="he" dir="rtl" data-doc-lang="he">
+      <h1>הודעה משפטית</h1>
+      <p class="doc__meta">עודכן לאחרונה: {{effectiveDate}}</p>
+
+      <h2 id="operator-he">1. מי מפעיל את האתר</h2>
+      {{#if cfg:operator.legalName}}
+      <p><strong>{{cfg:operator.legalName}}</strong>{{#if cfg:operator.address}}<br>{{cfg:operator.address}}{{/if}}{{#if cfg:operator.country}}<br>{{cfg:operator.country}}{{/if}}</p>
+      <ul>
+        {{#if cfg:operator.registrationId}}<li>מספר רישום (עוסק / ח.פ.): <span dir="ltr">{{cfg:operator.registrationId}}</span></li>{{/if}}
+        {{#if cfg:operator.vatId}}<li>מספר מע"מ: <span dir="ltr">{{cfg:operator.vatId}}</span></li>{{/if}}
+        <li>דוא"ל: {{mailto:contact.email|<span class="doc__todo">יושלם</span>}}</li>
+        {{#if cfg:contact.phone}}<li>טלפון: <span dir="ltr">{{cfg:contact.phone}}</span></li>{{/if}}
+      </ul>
+      {{else}}
+      <p><span class="doc__todo">שם המפעיל, כתובתו ופרטי הקשר שלו יפורסמו כאן לפני פתיחת האתר לציבור.</span></p>
+      {{/if}}
+      <p>{{brand}} הוא שם השירות. האדם או החברה הנקובים לעיל אחראים לתוכן האתר.</p>
+
+      <h2 id="contacts-he">2. דרכי פנייה</h2>
+      <ul>
+        <li>פניות כלליות, הגשות ודיווחים על מודעות: {{mailto:contact.email|<span class="doc__todo">יושלם</span>}}</li>
+        <li>פרטיות: {{mailto:contact.privacyEmail,contact.email|<span class="doc__todo">יושלם</span>}}</li>
+        <li>נגישות: {{mailto:contact.accessibilityEmail,contact.email|<span class="doc__todo">יושלם</span>}}</li>
+        <li>אבטחת מידע: {{mailto:contact.securityEmail,contact.email|<span class="doc__todo">יושלם</span>}}</li>
+      </ul>
+
+      <h2 id="advertising-he">3. גילוי נאות על פרסום</h2>
+      <p>{{brand}} הוא שירות פרסום. כל אפליקציה המוצגת ב“מוצג עכשיו” היא פרסום בתשלום ומסומנת בתווית “ממומן”. המפרסמים משלמים לנו דמי מנוי חודשיים עבור ההצגה. איננו מקבלים עמלה על הורדות או רכישות, ומודעה אינה המלצה.</p>
+
+      <h2 id="trademarks-he">4. סימני מסחר</h2>
+      <p>Apple ו-App Store הם סימני מסחר של Apple Inc.‏ Google Play הוא סימן מסחר של Google LLC. כל שאר שמות המוצרים, הסמלים והמותגים המוצגים במודעות שייכים לבעליהם, והשימוש בהם נעשה על ידי המפרסמים שהם בעליהם או שהוסמכו להשתמש בהם. {{brand}} הוא שירות עצמאי שאינו קשור ל-Apple, ל-Google או למפרסם כלשהו, אינו ממומן על ידם ואינו פועל בחסותם.</p>
+
+      <h2 id="links-he">5. קישורים חיצוניים</h2>
+      <p>האתר מקשר לחנויות אפליקציות ולאתרי מפרסמים. אנו בודקים את הקישורים בעת פרסום המודעה, אך איננו שולטים באתרים אלה ואיננו אחראים לתוכנם. אם מצאת קישור שמוביל ליעד בלתי חוקי או מטעה, אנא <a href="guidelines.html#report-he">דווח על כך</a> ונסיר אותו.</p>
+
+      <h2 id="security-he">6. דיווח על בעיית אבטחה</h2>
+      <p>אם לדעתך מצאת פרצת אבטחה באתר, אנא דווח לנו באופן פרטי בכתובת {{mailto:contact.securityEmail,contact.email|כתובת הדוא"ל שתפורסם לעיל}} ותן לנו זמן סביר לתקן לפני פרסום ברבים. לא ננקוט הליכים משפטיים נגד מי שמדווח בתום לב, נמנע מגישה למידע של אחרים ואינו משבש את השירות. איננו מפעילים תוכנית תגמול כספי על דיווחים.</p>
+
+      <h2 id="disputes-he">7. יישוב מחלוקות</h2>
+      <p>אנו מעדיפים לפתור בעיות ישירות, ולכן אנא פנה אלינו תחילה. איננו משתתפים בהליכי יישוב סכסוכים בפני גופי בוררות צרכניים, אלא אם הדין מחייב אותנו לכך.</p>
+
+      <h2 id="credits-he">8. קרדיטים לקוד פתוח</h2>
+      <p>האתר משתמש ברכיבי הקוד הפתוח הבאים, בתודה ליוצריהם:</p>
+      <ul>
+        <li><span dir="ltr">three.js</span> — רישיון MIT. זכויות היוצרים שייכות ליוצרי three.js.</li>
+        <li>הגופן Oswald — רישיון SIL Open Font License 1.1.</li>
+        <li>הגופן Rubik — רישיון SIL Open Font License 1.1.</li>
+        <li>הגופן Karantina — רישיון SIL Open Font License 1.1.</li>
+      </ul>
+      <p>נוסחי הרישיונות מתפרסמים לצד הקבצים שעליהם הם חלים.</p>
+    </article>
+  </div>
+</main>

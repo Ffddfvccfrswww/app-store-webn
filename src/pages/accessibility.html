@@ -1,0 +1,101 @@
+<!--page
+{
+  "file": "accessibility.html",
+  "page": "legal",
+  "bodyClass": "page-plain page-legal",
+  "titleKey": "meta.accessibility.title",
+  "descKey": "meta.accessibility.desc",
+  "css": ["pages"]
+}
+-->
+<main id="main" class="page" tabindex="-1">
+  <div class="shell shell--narrow">
+    {{> legalnav}}
+
+    <article class="doc" lang="en" dir="ltr" data-doc-lang="en">
+      <h1>Accessibility Statement</h1>
+      <p class="doc__meta">Last updated: {{effectiveDate}}</p>
+
+      <p class="doc__summary"><strong>In short:</strong> {{brand}} is built so that everyone can use it, with a keyboard, a screen reader, a small screen or with animations switched off. If something does not work for you, please tell us and we will fix it.</p>
+
+      <h2 id="commitment">1. Our commitment</h2>
+      <p>We want the Site to be usable by as many people as possible, including people with disabilities. We designed and tested the Site against the Web Content Accessibility Guidelines (WCAG) 2.1 at Level AA, which is also the basis of Israeli Standard 5568 and of the European standard EN 301 549.</p>
+
+      <h2 id="features">2. What we have done</h2>
+      <ul>
+        <li><strong>Keyboard:</strong> every link, button, form field and dialog can be reached and used with the keyboard alone, with a clearly visible focus outline and a “Skip to main content” link.</li>
+        <li><strong>Screen readers:</strong> pages use proper headings, landmarks, labels and language attributes. Decorative graphics, including the 3D scene, are hidden from assistive technology.</li>
+        <li><strong>Motion:</strong> a “Pause animations” button in the header and footer stops all movement. The Site also follows the “reduce motion” setting of your device. Nothing on the Site flashes.</li>
+        <li><strong>Text and contrast:</strong> text can be enlarged to 200% and the layout adapts down to a width of 320 pixels without horizontal scrolling. Text colours are chosen for sufficient contrast.</li>
+        <li><strong>Forms:</strong> every field has a visible label, required fields are marked, and errors are explained in text next to the field and announced to screen readers.</li>
+        <li><strong>Languages and direction:</strong> the Site is available in ten languages and supports right-to-left reading for Hebrew and Arabic.</li>
+        <li><strong>Without scripts:</strong> the main content of every page can be read even when JavaScript is switched off.</li>
+      </ul>
+
+      <h2 id="limits">3. Known limitations</h2>
+      <ul>
+        <li>The 3D film scene on the home page is decorative. It carries no information that is not also given in text.</li>
+        <li>Posters and descriptions of apps are supplied by publishers. We ask for clear text and check listings, but their quality may vary.</li>
+        <li>App stores and publishers' websites that listings link to are outside our control.</li>
+        <li>The legal documents are available in English and Hebrew only.</li>
+      </ul>
+
+      <h2 id="testing">4. How we test</h2>
+      <p>We check the Site with automated accessibility tests (axe-core) on every page, and by hand with a keyboard, at different zoom levels, in right-to-left layout and with animations switched off. This is a self-assessment; the Site has not yet been audited by an independent accessibility expert.</p>
+
+      <h2 id="feedback">5. Tell us about a problem</h2>
+      <p>If you find a barrier, or need information from the Site in another format, please contact us. Tell us which page you were on and what happened, and we will do our best to help and to fix the problem within a reasonable time.</p>
+      <ul>
+        {{#if cfg:contact.accessibilityName}}<li>Accessibility coordinator: {{cfg:contact.accessibilityName}}</li>{{/if}}
+        <li>Email: {{mailto:contact.accessibilityEmail,contact.email|see our <a href="legal.html">Legal Notice</a> page}}</li>
+        {{#if cfg:contact.phone}}<li>Phone: {{cfg:contact.phone}}</li>{{/if}}
+      </ul>
+
+      <h2 id="enforcement">6. If you are not satisfied</h2>
+      <p>If you are not happy with our answer, you may contact the body responsible for accessibility or equality in your country.</p>
+    </article>
+
+    <article class="doc" lang="he" dir="rtl" data-doc-lang="he">
+      <h1>הצהרת נגישות</h1>
+      <p class="doc__meta">עודכן לאחרונה: {{effectiveDate}}</p>
+
+      <p class="doc__summary"><strong>בקצרה:</strong> {{brand}} נבנה כך שכל אחד יוכל להשתמש בו: במקלדת, בקורא מסך, במסך קטן או כשהאנימציות כבויות. אם משהו אינו עובד עבורך, אנא ספר לנו ונתקן.</p>
+
+      <h2 id="commitment-he">1. המחויבות שלנו</h2>
+      <p>אנו רוצים שהאתר יהיה שמיש לכמה שיותר אנשים, לרבות אנשים עם מוגבלות. תכננו ובדקנו את האתר לפי הנחיות הנגישות לתכני אינטרנט (WCAG) 2.1 ברמה AA, שעליהן מבוססים גם תקן ישראלי 5568 והתקן האירופי EN 301 549, ובהתאם לתקנות שוויון זכויות לאנשים עם מוגבלות (התאמות נגישות לשירות), התשע"ג-2013.</p>
+
+      <h2 id="features-he">2. מה עשינו</h2>
+      <ul>
+        <li><strong>מקלדת:</strong> אפשר להגיע לכל קישור, כפתור, שדה טופס וחלון ולהפעיל אותם במקלדת בלבד, עם סימון מיקוד ברור וקישור “דילוג לתוכן הראשי”.</li>
+        <li><strong>קוראי מסך:</strong> העמודים בנויים עם כותרות, אזורים, תוויות ותכונות שפה תקינים. גרפיקה קישוטית, לרבות סצנת התלת-ממד, מוסתרת מטכנולוגיות מסייעות.</li>
+        <li><strong>תנועה:</strong> כפתור “השהיית אנימציות” בראש העמוד ובתחתיתו עוצר כל תנועה. האתר גם מכבד את הגדרת “הפחתת תנועה” במכשיר שלך. אין באתר הבהובים.</li>
+        <li><strong>טקסט וניגודיות:</strong> אפשר להגדיל את הטקסט עד 200%, והעיצוב מתאים את עצמו עד רוחב של 320 פיקסלים ללא גלילה אופקית. צבעי הטקסט נבחרו לניגודיות מספקת.</li>
+        <li><strong>טפסים:</strong> לכל שדה תווית גלויה, שדות החובה מסומנים, והשגיאות מוסברות בטקסט ליד השדה ומוקראות לקוראי מסך.</li>
+        <li><strong>שפות וכיוון:</strong> האתר זמין בעשר שפות ותומך בקריאה מימין לשמאל בעברית ובערבית.</li>
+        <li><strong>ללא סקריפטים:</strong> התוכן העיקרי של כל עמוד ניתן לקריאה גם כאשר JavaScript כבוי.</li>
+      </ul>
+
+      <h2 id="limits-he">3. מגבלות ידועות</h2>
+      <ul>
+        <li>סצנת התלת-ממד בעמוד הבית היא קישוטית. אין בה מידע שאינו מופיע גם בטקסט.</li>
+        <li>הפוסטרים והתיאורים של האפליקציות מסופקים על ידי המפרסמים. אנו מבקשים טקסט ברור ובודקים את המודעות, אך איכותם עשויה להשתנות.</li>
+        <li>חנויות האפליקציות ואתרי המפרסמים שהמודעות מקשרות אליהם אינם בשליטתנו.</li>
+        <li>המסמכים המשפטיים זמינים באנגלית ובעברית בלבד.</li>
+      </ul>
+
+      <h2 id="testing-he">4. איך אנו בודקים</h2>
+      <p>אנו בודקים את האתר בבדיקות נגישות אוטומטיות (axe-core) בכל עמוד, ובבדיקה ידנית במקלדת, ברמות הגדלה שונות, בתצוגה מימין לשמאל וכשהאנימציות כבויות. זוהי הערכה עצמית; האתר טרם נבדק על ידי מורשה נגישות חיצוני.</p>
+
+      <h2 id="feedback-he">5. נתקלת בבעיה? ספר לנו</h2>
+      <p>אם נתקלת בקושי, או שאתה זקוק למידע מהאתר בפורמט אחר, אנא פנה אלינו. ציין באיזה עמוד היית ומה קרה, ונעשה כמיטב יכולתנו לסייע ולתקן את הבעיה בתוך זמן סביר.</p>
+      <ul>
+        {{#if cfg:contact.accessibilityName}}<li>רכז/ת הנגישות: {{cfg:contact.accessibilityName}}</li>{{/if}}
+        <li>דוא"ל: {{mailto:contact.accessibilityEmail,contact.email|ראה בעמוד <a href="legal.html">ההודעה המשפטית</a>}}</li>
+        {{#if cfg:contact.phone}}<li>טלפון: <span dir="ltr">{{cfg:contact.phone}}</span></li>{{/if}}
+      </ul>
+
+      <h2 id="enforcement-he">6. אם אינך מרוצה מהמענה</h2>
+      <p>אם אינך מרוצה מתשובתנו, אתה רשאי לפנות לגוף האחראי על נגישות או על שוויון במדינתך. בישראל: נציבות שוויון זכויות לאנשים עם מוגבלות.</p>
+    </article>
+  </div>
+</main>

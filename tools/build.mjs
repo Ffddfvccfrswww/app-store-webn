@@ -24,6 +24,17 @@ const SRC = path.join(ROOT, 'src');
 const CHECK = process.argv.includes('--check');
 const QUIET = process.argv.includes('--quiet');
 
+function option(name, fallback) {
+  const index = process.argv.indexOf(`--${name}`);
+  return index !== -1 && process.argv[index + 1] ? process.argv[index + 1] : fallback;
+}
+
+// --config and --out exist so the test-suite can build variants of the site
+// (for example with a form service configured) without touching docs/.
+const CONFIG_FILE = path.resolve(ROOT, option('config', 'site.config.js'));
+const OUT_DIR = path.resolve(ROOT, option('out', 'docs'));
+const IS_MAIN_BUILD = OUT_DIR === path.join(ROOT, 'docs') && CONFIG_FILE === path.join(ROOT, 'site.config.js');
+
 /* --------------------------------------------------------------------------
    Small helpers
    -------------------------------------------------------------------------- */
@@ -72,7 +83,7 @@ async function listFiles(dir, base = dir) {
    -------------------------------------------------------------------------- */
 
 async function loadConfig() {
-  const module = await import(pathToFileURL(path.join(ROOT, 'site.config.js')).href + `?t=${Date.now()}`);
+  const module = await import(pathToFileURL(CONFIG_FILE).href + `?t=${Date.now()}`);
   const config = module.default;
   const problems = [];
 
@@ -333,7 +344,9 @@ function stampTranslations(html, t) {
 function firstConfigValue(config, paths) {
   for (const p of paths.split(',')) {
     const value = getPath(config, p.trim());
-    if (value !== undefined && value !== null && String(value).trim() !== '') return String(value).trim();
+    if (value !== undefined && value !== null && value !== false && String(value).trim() !== '') {
+      return String(value).trim();
+    }
   }
   return '';
 }
@@ -347,10 +360,14 @@ function renderTemplate(template, { config, vars, partials }, depth = 0) {
     return renderTemplate(partials[name], { config, vars, partials }, depth + 1);
   });
 
-  out = out.replace(
-    /\{\{#if cfg:([\w.,]+)\}\}([\s\S]*?)(?:\{\{else\}\}([\s\S]*?))?\{\{\/if\}\}/g,
-    (match, paths, yes, no = '') => (firstConfigValue(config, paths) ? yes : no),
-  );
+  // Conditional blocks may be nested, so the innermost ones are resolved first.
+  const innermostIf = /\{\{#if cfg:([\w.,]+)\}\}((?:(?!\{\{#if)[\s\S])*?)\{\{\/if\}\}/g;
+  for (let pass = 0; pass < 12 && /\{\{#if /.test(out); pass += 1) {
+    out = out.replace(innermostIf, (match, paths, body) => {
+      const [yes, no = ''] = body.split('{{else}}');
+      return firstConfigValue(config, paths) ? yes : no;
+    });
+  }
 
   out = out.replace(/\{\{cfg:([\w.,]+)(?:\|([^}]*))?\}\}/g, (match, paths, fallback = '') => {
     const value = firstConfigValue(config, paths);
@@ -632,6 +649,13 @@ async function build(outDir) {
     const body = renderTemplate(page.body, { config, vars: pageVars, partials });
     html = html.replace('%%CONTENT%%', () => body);
     html = stampTranslations(html, t);
+    if (page.meta.absoluteUrls && config.siteUrl) {
+      // The 404 page can be served at any depth, so its links must not be relative.
+      html = html.replace(
+        /\b(href|src)="(?!https?:|mailto:|tel:|#|data:)([^"]+)"/g,
+        (match, attribute, target) => `${attribute}="${config.siteUrl}/${target}"`,
+      );
+    }
     if (/data-i18n(?:-attr|-rich)?="[^"]*"[^<>]*>\s*<\/(?:title)>/.test(html)) {
       throw new Error(`${page.meta.file}: an element was left untranslated.`);
     }
@@ -701,12 +725,11 @@ async function main() {
     return;
   }
 
-  const outDir = path.join(ROOT, 'docs');
-  const result = await build(outDir);
-  await writeFile(path.join(ROOT, 'vercel.json'), result.vercel);
+  const result = await build(OUT_DIR);
+  if (IS_MAIN_BUILD) await writeFile(path.join(ROOT, 'vercel.json'), result.vercel);
   if (!QUIET) {
-    const files = await listFiles(outDir);
-    console.log(`Built ${result.pages.length} pages, ${files.length} files → docs/`);
+    const files = await listFiles(OUT_DIR);
+    console.log(`Built ${result.pages.length} pages, ${files.length} files → ${path.relative(ROOT, OUT_DIR) || '.'}/`);
   }
 }
 
